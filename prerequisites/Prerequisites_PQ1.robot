@@ -30,10 +30,10 @@ Prerequisites 1
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
     ClickItem                   checkbox                    anchor=Admin User           partial_match=False
-    ClickText                   Next                        partial_match=False         delay=5s
-    ClickItem                   checkbox                    anchor=Admin User           partial_match=False    delay=5s
+    ClickText                   Next                        partial_match=False         delay=3s
+    ClickItem                   checkbox                    anchor=Admin User           partial_match=False    delay=3s
     ClickText                   Next                        partial_match=False
-    TypeText                    Description of Change       test                        delay=5s
+    TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
     ComboBox                    Search People...            Admin User
     ClickText                   Next
@@ -42,7 +42,7 @@ Prerequisites 1
 
 
     ClickText                   Actions                     partial_match=False                        delay=12s
-    ClickText                   Start Review
+    ClickText                   Start Review                partial_match=False                        delay=2s
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
@@ -59,6 +59,7 @@ Prerequisites 1
     ClickText                   QA Approval                 partial_match=False                        delay=12s
     PickList                    Applicable Training Plan Attached?                      No
     ClickText                   Next
+    VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
