@@ -13,7 +13,7 @@ login
 Prerequisites 1
     [Documentation]             One Master Documents records, Name = Temp2, type Controlled, Is Template = checked, Document Type = Policy, Document Sub Type = Validation Policy, in ‘Effective’ state exists in the system.
     LaunchApp                   Master Documents
-    Click New Master Document type Controlled
+    Click New Master Document type Controlled        
     TypeText                    *Document Name              TempTest2
     PickList                    *Document Type              Policy
     PickList                    Document Subtype            Validation Policy
