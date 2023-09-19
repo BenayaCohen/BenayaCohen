@@ -22,7 +22,7 @@ Prerequisites 1
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     ClickText                   Save                        partial_match=False
-    UploadFile                  Upload Files                test.txt
+    UploadFile                  Upload Files                Files_To_Upload/Test Doc.docx
     ClickText                   Done
 
     ClickText                   Actions                     partial_match=False
