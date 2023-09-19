@@ -16,11 +16,11 @@ Prerequisites 1
     Click New Master Document type Controlled
     TypeText                    *Document Name              TempTest2
     PickList                    *Document Type              Policy
-    PickList                    Document Subtype           Validation Policy
+    PickList                    Document Subtype            Validation Policy
     PickList                    *Business Unit              General
-    PickList                    *Is this a Form or Translation?                     No
+    PickList                    *Is this a Form or Translation?                         No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     ClickText                   Save                        partial_match=False
-    UploadFile                  Files_To_Upload/Test Doc.docx                       filename=Test Doc.docx 
+    UploadFile                  Upload Files                test.txt/test.txt
     ClickText                   Done
