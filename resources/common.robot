@@ -82,17 +82,17 @@ NoData
 Policy
     [Documentation]             create a master doument type Policy
     LaunchApp                   Master Documents
-    Sleep                       5 
+    Sleep                       5
     Click New Master Document type Controlled
     TypeText                    *Document Name              TempTest1
     PickList                    *Document Type              Policy
-    PickList                    Document Sub Type           Validation Policy 
+    PickList                    Document Sub Type           Validation Policy
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
-    ClickCheckbox               Is Template                         on
+    ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     ClickText                   Save                        partial_match=False
-   #uplode file
+    #uplode file
 
 Appendix
     [Documentation]             create a master doument type Appendix
@@ -105,7 +105,7 @@ Appendix
 Worksheet
     [Documentation]             create a master doument type Worksheet
     LaunchApp                   Master Documents
-    Sleep                       5 
+    Sleep                       5
     Click New Master Document type Controlled
     TypeText                    *Document Name              OQ1MD1 test7
     PickList                    *Document Type              Worksheet
@@ -119,7 +119,7 @@ Worksheet
 Protocol
     [Documentation]             create a master doument type Protocol
     LaunchApp                   Master Documents
-    Sleep                       5                     
+    Sleep                       5
     Click New Master Document type Controlled
     TypeText                    *Document Name              OQ1MD1 test7
     PickList                    *Document Type              Protocol                    anchor=Document Type
@@ -157,7 +157,6 @@ Cancel the record
     TypeText                    Comments                    test
     ClickText                   Next
 Sign with admin    
-    TypeText                    Username                    ${username_admin}           delay=1
-    TypeText                    Password                    ${password_admin}
-    ClickText                   Sign
-   
+    TypeText                    User                        ${username_admin}           delay=1
+    TypeText                    User Password               ${password_admin}
+    ClickText                   Sign                        anchor=Cancel
