@@ -31,32 +31,32 @@ Prerequisites 1
     VerifyText                  Select Signatories for Revision Review
     ClickItem                   checkbox                    anchor=Admin User           partial_match=False
     ClickText                   Next                        partial_match=False         delay=5s
-    VerifyText                  Select Signatories for Revision Approval
     ClickItem                   checkbox                    anchor=Admin User           partial_match=False    delay=5s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=5s
     TypeText                    Rationale of Revision       test
     ComboBox                    Search People...            Admin User
     ClickText                   Next
-    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
+    VerifyText                  E-Signature for Send for Review
+    Sign with admin             
 
 
-    ClickText                   Actions                     partial_match=False                        delay=5s
+    ClickText                   Actions                     partial_match=False                        delay=12s
     ClickText                   Start Review
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
-    ClickText                   Actions                     partial_match=False                        delay=5s
+    ClickText                   Actions                     partial_match=False                        delay=12s
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
-    ClickText                   Actions                     partial_match=False                        delay=5s
+    ClickText                   Actions                     partial_match=False                        delay=12s
     ClickText                   Start Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
     ClickText                   Actions
-    ClickText                   QA Approval                 partial_match=False                        delay=5s
+    ClickText                   QA Approval                 partial_match=False                        delay=12s
     PickList                    Applicable Training Plan Attached?                      No
     ClickText                   Next
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
