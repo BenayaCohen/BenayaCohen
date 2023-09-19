@@ -25,36 +25,42 @@ Prerequisites 1
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
 
-    ClickText                   Actions                     partial_match=False
+
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
     ClickText                   Send for Review
-    ClickItem                   checkbox                    anchor=Admin User    partial_match=False
+    VerifyText                  Select Signatories for Revision Review
+    ClickItem                   checkbox                    anchor=Admin User           partial_match=False
+    ClickText                   Next                        partial_match=False         delay=5s
+    VerifyText                  Select Signatories for Revision Approval
+    ClickItem                   checkbox                    anchor=Admin User           partial_match=False    delay=5s
     ClickText                   Next                        partial_match=False
-    ClickItem                   checkbox                    anchor=Admin User    partial_match=False
-    ClickText                   Next                        partial_match=False
-    TypeText                    Description of Change       test
+    TypeText                    Description of Change       test                        delay=5s
     TypeText                    Rationale of Revision       test
     ComboBox                    Search People...            Admin User
     ClickText                   Next
-    Wait Until Keyword Succeeds                        60                        5    Sign with admin
-    
-
-    ClickText                   Actions                     partial_match=False
-    ClickText                   Start Review 
-    Wait Until Keyword Succeeds                        60                        5    Sign with admin
+    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
-    ClickText                   Actions
+    ClickText                   Actions                     partial_match=False                        delay=5s
+    ClickText                   Start Review
+    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
+
+
+    ClickText                   Actions                     partial_match=False                        delay=5s
     ClickText                   Send For Approval
-    Sign with admin
+    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
+
+
+    ClickText                   Actions                     partial_match=False                        delay=5s
+    ClickText                   Start Approval
+    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
     ClickText                   Actions
-    ClickText                   Sign Document Approval
-    Sign with admin
-
-    ClickText                   Actions
-    ClickText                   QA Approval
+    ClickText                   QA Approval                 partial_match=False                        delay=5s
     PickList                    Applicable Training Plan Attached?                      No
     ClickText                   Next
-    Sign with admin
+    Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
-                                              
+
+
+
