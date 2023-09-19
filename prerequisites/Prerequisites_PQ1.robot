@@ -56,8 +56,8 @@ Prerequisites 1
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
     ClickText                   Actions
-    ClickText                   QA Approval                 partial_match=False                        delay=12s
-    PickList                    Applicable Training Plan Attached?                      No
+    ClickText                   QA Approval - Skip Training                 partial_match=False                        delay=12s
+    TypeText                    Comments                        test
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
