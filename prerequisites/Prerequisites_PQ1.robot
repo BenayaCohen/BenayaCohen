@@ -18,26 +18,43 @@ Prerequisites 1
     PickList                    *Document Type              Policy
     PickList                    Document Subtype            Validation Policy
     PickList                    *Business Unit              General
-    PickList                    *Is this a Form or Translation?                     No
+    PickList                    *Is this a Form or Translation?                         No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     ClickText                   Save                        partial_match=False
-    UploadFile                  Upload Files                Files_To_Upload/Test Doc.docx
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
 
     ClickText                   Actions                     partial_match=False
     ClickText                   Send for Review
-    UseTable                    Sort\n by:\n
-    ClickCheckbox               r?on/c1                     on
+    ClickItem                   checkbox                    anchor=Admin User    partial_match=False
     ClickText                   Next                        partial_match=False
-    ClickCheckbox               r?on/c1                     on
+    ClickItem                   checkbox                    anchor=Admin User    partial_match=False
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test
     TypeText                    Rationale of Revision       test
     ComboBox                    Search People...            Admin User
     ClickText                   Next
-    Sign with admin
+    Wait Until Keyword Succeeds                        60                        5    Sign with admin
+    
 
     ClickText                   Actions                     partial_match=False
-    ClickText                   Start Review
+    ClickText                   Start Review 
+    Wait Until Keyword Succeeds                        60                        5    Sign with admin
+
+
+    ClickText                   Actions
+    ClickText                   Send For Approval
     Sign with admin
+
+    ClickText                   Actions
+    ClickText                   Sign Document Approval
+    Sign with admin
+
+    ClickText                   Actions
+    ClickText                   QA Approval
+    PickList                    Applicable Training Plan Attached?                      No
+    ClickText                   Next
+    Sign with admin
+
+                                              
