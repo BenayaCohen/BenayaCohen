@@ -18,9 +18,26 @@ Prerequisites 1
     PickList                    *Document Type              Policy
     PickList                    Document Subtype            Validation Policy
     PickList                    *Business Unit              General
-    PickList                    *Is this a Form or Translation?                         No
+    PickList                    *Is this a Form or Translation?                     No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     ClickText                   Save                        partial_match=False
-    UploadFile                  Upload Files                test.txt/test.txt
+    UploadFile                  Upload Files                test.txt
     ClickText                   Done
+
+    ClickText                   Actions                     partial_match=False
+    ClickText                   Send for Review
+    UseTable                    Sort\n by:\n
+    ClickCheckbox               r?on/c1                     on
+    ClickText                   Next                        partial_match=False
+    ClickCheckbox               r?on/c1                     on
+    ClickText                   Next                        partial_match=False
+    TypeText                    Description of Change       test
+    TypeText                    Rationale of Revision       test
+    ComboBox                    Search People...            Admin User
+    ClickText                   Next
+    Sign with admin
+
+    ClickText                   Actions                     partial_match=False
+    ClickText                   Start Review
+    Sign with admin
