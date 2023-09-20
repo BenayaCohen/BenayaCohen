@@ -91,7 +91,7 @@ Policy
     PickList                    *Is this a Form or Translation?                         No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False
+    save the record
     #uplode file
 
 Appendix
@@ -100,38 +100,36 @@ Appendix
     PickList                    *Document Type              Appendix
     PickList                    *Business Unit              General
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False
+    save the record
 
 Worksheet
     [Documentation]             create a master doument type Worksheet
     LaunchApp                   Master Documents
-    Sleep                       5
     Click New Master Document type Controlled
     TypeText                    *Document Name              OQ1MD1 test7
     PickList                    *Document Type              Worksheet
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False
+    save the record
     VerifyText                  WKS                         anchor=Master Document Number
 
 
 Protocol
     [Documentation]             create a master doument type Protocol
     LaunchApp                   Master Documents
-    Sleep                       5
     Click New Master Document type Controlled
     TypeText                    *Document Name              OQ1MD1 test7
     PickList                    *Document Type              Protocol                    anchor=Document Type
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False
+    save the record
     VerifyText                  PRT                         anchor=Master Document Number
 
 
 Click New Master Document type Controlled 
-    ClickText                   New                         anchor=Import
+    ClickText                   New                         anchor=Import               delay=5s
     Verify Dialog Title New Master Document
     ClickText                   Next
 
@@ -147,15 +145,17 @@ Verify Dialog Title New Master Document
     Use Modal                   Off
 
 verify the fields are required
-    ClickText                   Save                        partial_match=False
+    save the record
     VerifyText                  Document Name               anchor=Review the following fields                      delay=3s
     VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields
 Sign with admin    
-    TypeText                    User                        ${username_admin}           delay=1
+    TypeText                    User                        ${username_admin}           delay=1s
     TypeText                    User Password               ${password_admin}
     ClickText                   Sign                        anchor=Cancel
  required field for Cancel and Re-Open
     ClickText                   Next                        delay=3s
     VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.    delay=3s
+save the record
+    ClickText                   Save                        partial_match=False        delay=3s
