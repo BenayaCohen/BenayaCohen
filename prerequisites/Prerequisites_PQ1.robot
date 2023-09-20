@@ -13,7 +13,7 @@ login
 Prerequisites 1
     [Documentation]             One Master Documents records, Name = Temp2, type Controlled, Is Template = checked, Document Type = Policy, Document Sub Type = Validation Policy, in ‘Effective’ state exists in the system.
     LaunchApp                   Master Documents
-    Click New Master Document type Controlled        
+    Click New Master Document type Controlled
     TypeText                    *Document Name              TempTest2
     PickList                    *Document Type              Policy
     PickList                    Document Subtype            Validation Policy
@@ -21,7 +21,7 @@ Prerequisites 1
     PickList                    *Is this a Form or Translation?                         No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False
+    ClickText                   Save                        partial_match=False         delay=3s
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
 
@@ -38,30 +38,46 @@ Prerequisites 1
     ComboBox                    Search People...            Admin User
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
-    Sign with admin             
+    Sign with admin
 
 
-    ClickText                   Actions                     partial_match=False                        delay=12s
-    ClickText                   Start Review                partial_match=False                        delay=2s
+    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Start Review                partial_match=False         delay=2s
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
-    ClickText                   Actions                     partial_match=False                        delay=12s
+    ClickText                   Actions                     partial_match=False         delay=12s
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
-    ClickText                   Actions                     partial_match=False                        delay=12s
+    ClickText                   Actions                     partial_match=False         delay=12s
     ClickText                   Start Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
     ClickText                   Actions
-    ClickText                   QA Approval - Skip Training                 partial_match=False                        delay=12s
-    TypeText                    Comments                        test
+    ClickText                   QA Approval - Skip Training                             partial_match=False    delay=12s
+    TypeText                    Comments                    test
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
+Prerequisites 2
+    [Documentation]             One Master Document, Record type: “Simple”, Name: Form1, Document Type: “Form”, Business Unit: “General”, in “Opened” state, related to Document Revision record that the tested user is not its owner exist in the system.
+    LaunchApp                   Master Documents
+    Click New Master Document type Simple
+    TypeText                    *Document Name              OQ1MD1 test7
+    PickList                    *Document Type              Form
+    PickList                    *Business Unit              General
+    ComboBox                    Search Departments...       test
+    ClickText                   Save                        partial_match=False         delay=3s
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
+    ClickText                   Done                        delay=5s
+    ClickText                   Edit Revision Owner
+    ComboBox                    Search People...            Standard User
+    ClickText                   Save
 
-
+Prerequisites 3
+    [Documentation]             One protocol (Training Effectiveness) with at least one question and passing score, in state opened, exists in the system
+        LaunchApp                   Protocols
