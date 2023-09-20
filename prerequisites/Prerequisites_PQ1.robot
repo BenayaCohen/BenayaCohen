@@ -21,7 +21,7 @@ Prerequisites 1
     PickList                    *Is this a Form or Translation?                         No
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False         delay=3s
+    save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
 
@@ -71,7 +71,7 @@ Prerequisites 2
     PickList                    *Document Type              Form
     PickList                    *Business Unit              General
     ComboBox                    Search Departments...       test
-    ClickText                   Save                        partial_match=False         delay=3s
+    save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done                        delay=5s
     ClickText                   Edit Revision Owner
@@ -87,7 +87,7 @@ Prerequisites 3
     TypeText                    *Protocol Name              ProTest2
     TypeText                    *Execution Limit            1
     TypeText                    *Passing Score              70
-    ClickText                   Save                        partial_match=False         delay=3s
+    save the record
     ClickText                   New                         delay=3s
     PickList                    *Question Type              Single Picklist
     TypeText                    *Short Description          test?
