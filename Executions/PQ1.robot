@@ -38,29 +38,29 @@ step 5
 steps 6
     [Documentation]             From the Life Cycle Path perform the following action: Cancel Verify that the following field is required for saving the record: Comments
     ClickText                   Cancel
-    ClickText                   Next
-    VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.
+    required field for Cancel and Re-Open
 step 7    
     [Documentation]             Fill in the required field and click Next
     TypeText                    Comments                    test
     ClickText                   Next
+
 step 8
     [Documentation]             Fill in the user Alias and password and click "Sign"
     Sign with admin
 
 steps 9
-    [Documentation]             Click 'Edit' and verify that the following fields are editable: Document Name (Text) Master Document Number (Text) Document Type (Picklist) Document Legacy Number (Text) Override Master Document Number (Checkbox) Department (Lookup: Department) Business Unit (Picklist) Classification (Picklist) Keywords (Text) Is it a Form or Translation? (Picklist) Master Document (Lookup: Master Document) Language (Picklist) Additional Document Name (Text) Effective Date (Date) Revision Number (Text) Last Periodic Review (Date) Periodic Review Required (Checkbox) Review Period (Number) Account (Lookup: Account) Supplier (Lookup: Supplier) File URL (URL) PDF URL (URL) Finally click Cancel.
-
-step 10
-    [Documentation]             Click Edit. On Document Type choose value: ‘Policy’ Verify that “Document Subtype” field is editable
+    [Documentation]             Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number
     ClickText                   Edit                        anchor=Sharing
-    UseModal                    on
-    PickList                    *Document Type              Policy
-    VerifyPickList              Document Subtype
+    #need to complete the step
+step 10
+    [Documentation]             From the Life Cycle Path verify that the following action is available: Re-Open
+    ClickText                   Actions
+    VerifyText                  Re-Open
 step 11
-    [Documentation]             Click 'Edit' and populate 'Document Legacy Number' field. Click Save.
-    TypeText                    Document Legacy Number      123
-    ClickText                   Save                        partial_match=False
+    [Documentation]             From the Life Cycle Path perform the following action: Re-Open Verify that the following field is required for saving the record: Comments
+    ClickText                   Re-Open
+    required field for Cancel and Re-Open
+   
 step 12
     [Documentation]             Click 'Edit' and populate the 'Override Master Document Number' checkbox with TRUE value. Click Save.
     ClickText                   Edit                        anchor=Sharing
