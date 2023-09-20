@@ -1,6 +1,5 @@
 *** Settings ***
 Library                         QForce
-Library                         QVision
 Library                         String
 
 
