@@ -42,7 +42,7 @@ Prerequisites 1
 
 
     ClickText                   Actions                     partial_match=False         delay=12s
-    ClickText                   Start Review                partial_match=False         delay=2s
+    QVision.ClickText           Sign
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
 
 
@@ -80,4 +80,28 @@ Prerequisites 2
 
 Prerequisites 3
     [Documentation]             One protocol (Training Effectiveness) with at least one question and passing score, in state opened, exists in the system
-        LaunchApp                   Protocols
+    LaunchApp                   Protocols
+    clickText                   New
+    ClickText                   Training Effectiveness      anchor=An electronic protocol designed as an exam, can be used as a verification for training effectiveness.
+    ClickText                   Next
+    TypeText                    *Protocol Name              ProTest2
+    TypeText                    *Execution Limit            1
+    TypeText                    *Passing Score              70
+    ClickText                   Save                        partial_match=False         delay=3s
+    ClickText                   New                         delay=3s
+    PickList                    *Question Type              Single Picklist
+    TypeText                    *Short Description          test?
+    TypeText                    *Choices                    Yes\nNo
+    ClickText                   Save
+    ClickElement                (//div[@class\='slds-no-flex actionIcons']/child::lightning-icon)              timeout=10              index=3
+    UseModal                    on
+    TypeText                    Score                       70                          partial_match=False     anchor=Yes 
+    ClickItem                   checkbox                    anchor=Yes           partial_match=False
+    ClickText                   Save
+
+
+
+
+
+
+
