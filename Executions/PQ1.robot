@@ -15,7 +15,6 @@ Suite Teardown                  End suite
 *** Test Cases ***
 step 1
     [Documentation]             Log into Dot Compliance Suite, Navigate to Master Documents tab
-    Login
     LaunchApp                   Master Documents
 
 step 2
@@ -29,8 +28,7 @@ step 3
 steps 4
     [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.1
     #apendix
-    #Upload file                tests/test.txt
-    #clickText                  Done
+
 
 step 5
     [Documentation]             From the Life cycle path verify that the following action is available: Cancel
@@ -39,16 +37,16 @@ step 5
     VerifyText                  Cancel                      anchor=Opened
 steps 6
     [Documentation]             From the Life Cycle Path perform the following action: Cancel Verify that the following field is required for saving the record: Comments
-    Cancel the record
-    Sign with admin
-
+    ClickText                   Cancel
+    ClickText                   Next
+    VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.
 step 7    
-    [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.1
-    #apendix
+    [Documentation]             Fill in the required field and click Next
+    TypeText                    Comments                    test
+    ClickText                   Next
 step 8
-    [Documentation]             Verify that ‘Master Document Number’ field consist of 3 letters of ‘Document Type’ concatenated to the document number.    In case of ‘Document Type’= ‘Worksheet’, “WKS” letters will concatenate at the beginning. In case of ‘Document Type’= ‘Protocol’, “PRT” letters will concatenate at the beginning.
-    Worksheet
-    Protocol
+    [Documentation]             Fill in the user Alias and password and click "Sign"
+    Sign with admin
 
 steps 9
     [Documentation]             Click 'Edit' and verify that the following fields are editable: Document Name (Text) Master Document Number (Text) Document Type (Picklist) Document Legacy Number (Text) Override Master Document Number (Checkbox) Department (Lookup: Department) Business Unit (Picklist) Classification (Picklist) Keywords (Text) Is it a Form or Translation? (Picklist) Master Document (Lookup: Master Document) Language (Picklist) Additional Document Name (Text) Effective Date (Date) Revision Number (Text) Last Periodic Review (Date) Periodic Review Required (Checkbox) Review Period (Number) Account (Lookup: Account) Supplier (Lookup: Supplier) File URL (URL) PDF URL (URL) Finally click Cancel.
