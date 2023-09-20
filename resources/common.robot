@@ -20,7 +20,7 @@ ${BASE_IMAGE_PATH}
 Setup Browser
     # Setting search order is Not really needed here, but given as an example
     # if you need to use multiple libraries containing keywords with duplicate names
-    Set Library Search Order    QForce                      QWeb                        QVision
+    Set Library Search Order    QForce                      QWeb                        
     Open Browser                about:blank                 ${BROWSER}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
