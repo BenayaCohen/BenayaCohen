@@ -148,14 +148,10 @@ Verify Dialog Title New Master Document
 
 verify the fields are required
     ClickText                   Save                        partial_match=False
-    VerifyText                  Document Name               anchor=Review the following fields
+    VerifyText                  Document Name               anchor=Review the following fields        delay=3s
     VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields
-Cancel the record
-    ClickText                   Cancel
-    TypeText                    Comments                    test
-    ClickText                   Next
 Sign with admin    
     TypeText                    User                        ${username_admin}           delay=1
     TypeText                    User Password               ${password_admin}
