@@ -20,7 +20,7 @@ ${BASE_IMAGE_PATH}
 Setup Browser
     # Setting search order is Not really needed here, but given as an example
     # if you need to use multiple libraries containing keywords with duplicate names
-    Set Library Search Order    QForce                      QWeb                        
+    Set Library Search Order    QForce                      QWeb
     Open Browser                about:blank                 ${BROWSER}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
@@ -148,7 +148,7 @@ Verify Dialog Title New Master Document
 
 verify the fields are required
     ClickText                   Save                        partial_match=False
-    VerifyText                  Document Name               anchor=Review the following fields        delay=3s
+    VerifyText                  Document Name               anchor=Review the following fields                      delay=3s
     VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields
@@ -156,3 +156,6 @@ Sign with admin
     TypeText                    User                        ${username_admin}           delay=1
     TypeText                    User Password               ${password_admin}
     ClickText                   Sign                        anchor=Cancel
+ required field for Cancel and Re-Open
+    ClickText                   Next                        delay=3s
+    VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.    delay=3s
