@@ -55,18 +55,29 @@ steps 9
 step 10
     [Documentation]             From the Life Cycle Path verify that the following action is available: Re-Open
     ClickText                   Actions
-    VerifyText                  Re-Open
+    VerifyText                  Re-Open                     anchor=Canceled
 step 11
     [Documentation]             From the Life Cycle Path perform the following action: Re-Open Verify that the following field is required for saving the record: Comments
     ClickText                   Re-Open
     required field for Cancel and Re-Open
-   
+
 step 12
-    [Documentation]             Click 'Edit' and populate the 'Override Master Document Number' checkbox with TRUE value. Click Save.
-    ClickText                   Edit                        anchor=Sharing
-    UseModal                    on
-    ClickCheckbox               Override Master Document Number                     on
-    ClickText                   Save                        partial_match=False
+    [Documentation]             Fill in the required field and click Save
+    TypeText                    Comments                    test
+    ClickText                   Save
 step 13
-    [Documentation]             Verify that 'Master Document Number' field was automatically populated according to 'Document Legacy Number' field.
-    GetFieldValue               Master Document Number
+    [Documentation]             Locate a file to upload. From ‘File Preview’ tab click or Drag a file to the Initial File Upload outlined section.
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
+step 14
+    [Documentation]             Click on ‘Done’ button.
+    ClickText                   Done
+step 15
+    [Documentation]             Navigate back to ‘Master Document’ record. Use the link from compact layout
+    ClickElement                (//span[@id\='window'])     timeout=10        delay=5s
+step 16
+    [Documentation]            Verify that the record page layout matches the layout in Appendix A 9.1.1.2
+    #appendix 2
+step 17
+    [Documentation]            Verify that ‘Master Document Number’ field consist of 3 letters of ‘Document Type’ concatenated to the document number. * In case of ‘Document Type’= ‘Worksheet’, “WKS” letters will concatenate at the beginning. * In case of ‘Document Type’= ‘Protocol’, “PRT” letters will concatenate at the beginning
+    Worksheet
+    Protocol
