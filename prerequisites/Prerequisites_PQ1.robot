@@ -3,7 +3,7 @@ Resource                        ../resources/common.robot
 Library                         DataDriver                  file=edit_fields.csv
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
-Library                         QVision  
+Library                         QVision
 
 
 
@@ -81,7 +81,7 @@ Prerequisites 2
 Prerequisites 3
     [Documentation]             One protocol (Training Effectiveness) with at least one question and passing score, in state opened, exists in the system
     LaunchApp                   Protocols
-    clickText                   New
+    clickText                   New                         delay=3s
     ClickText                   Training Effectiveness      anchor=An electronic protocol designed as an exam, can be used as a verification for training effectiveness.
     ClickText                   Next
     TypeText                    *Protocol Name              ProTest2
@@ -93,11 +93,13 @@ Prerequisites 3
     TypeText                    *Short Description          test?
     TypeText                    *Choices                    Yes\nNo
     ClickText                   Save
-    ClickElement                (//div[@class\='slds-no-flex actionIcons']/child::lightning-icon)              timeout=10              index=3
+    ClickElement                (//lightning-icon[@title\="Score Builder"])
     UseModal                    on
-    TypeText                    Score                       70                          partial_match=False     anchor=Yes 
-    ClickItem                   checkbox                    anchor=Yes           partial_match=False
+    TypeText                    (//input[@name\="ScoreInput"])                          100
+    ClickElement                (//label[@class\="slds-checkbox__label"])               index=1
     ClickText                   Save
+    UseModal                    off
+
 
 
 
