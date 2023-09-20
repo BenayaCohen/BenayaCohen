@@ -73,11 +73,19 @@ step 14
     ClickText                   Done
 step 15
     [Documentation]             Navigate back to ‘Master Document’ record. Use the link from compact layout
-    ClickElement                (//span[@id\='window'])     timeout=10        delay=5s
+    ClickElement                (//span[@id\='window'])     timeout=10                  delay=5s
 step 16
-    [Documentation]            Verify that the record page layout matches the layout in Appendix A 9.1.1.2
+    [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.2
     #appendix 2
 step 17
-    [Documentation]            Verify that ‘Master Document Number’ field consist of 3 letters of ‘Document Type’ concatenated to the document number. * In case of ‘Document Type’= ‘Worksheet’, “WKS” letters will concatenate at the beginning. * In case of ‘Document Type’= ‘Protocol’, “PRT” letters will concatenate at the beginning
+    [Documentation]             Verify that ‘Master Document Number’ field consist of 3 letters of ‘Document Type’ concatenated to the document number. * In case of ‘Document Type’= ‘Worksheet’, “WKS” letters will concatenate at the beginning. * In case of ‘Document Type’= ‘Protocol’, “PRT” letters will concatenate at the beginning
     Worksheet
     Protocol
+step 18
+    [Documentation]             Click 'Edit' and verify that the following fields are editable: Document Name (Text) Master Document Number (Text) Document Type (Picklist) Document Sub type (Picklist) Document Legacy Number (Text) Override Master Document Number (Checkbox) Department (Lookup: Department) Business Unit (Picklist) Classification (Picklist) Keywords (Text) Is it a Form or Translation? (Picklist) Master Document (Lookup: Master Document) Language (Picklist) Template Document (Lookup) Additional Document Name (Text) Effective Date (GMT) (Date) Revision Number (Text) Last Periodic Review (Date) Periodic Review Required (Checkbox) Review Period (Number) Account (Lookup: Account) Supplier (Lookup: Supplier) File URL (URL) PDF URL (URL) Finally click Cancel.
+    #need to complete the step
+step 19      
+    [Documentation]             Click Edit. On Document Type choose value: ‘Policy’ Verify that “Document Subtype” field is editable
+    ClickText                   Edit                        anchor=Sharing
+    PickList                    *Document Type              Policy
+    VerifyPickList              sub-type
