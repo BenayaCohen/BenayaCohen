@@ -25,6 +25,7 @@ Setup Browser
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
     Evaluate                    random.seed()               random                      # initialize random generator
+    Login
 
 
 End suite
