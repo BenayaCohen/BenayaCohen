@@ -87,5 +87,18 @@ step 18
 step 19      
     [Documentation]             Click Edit. On Document Type choose value: ‘Policy’ Verify that “Document Subtype” field is editable
     ClickText                   Edit                        anchor=Sharing
-    PickList                    *Document Type              Policy
-    VerifyPickList              sub-type
+    PickList                    *Document Type              Policy                      delay=1s
+    VerifyPickList              Document Subtype
+step 20
+    [Documentation]             Click 'Edit' and populate 'Document Legacy Number' field.
+    #problem with the script
+    TypeText                    Document Legacy Number      123
+    save the record
+step 21
+    [Documentation]            Click 'Edit' and populate the 'Override Master Document Number' checkbox with TRUE value.
+    ClickText                  Edit
+    ClickCheckbox              Override Master Document Number        on
+step 22
+    [Documentation]            Verify that 'Master Document Number' field was automatically populated according to 'Document Legacy Number' field.
+    GetFieldValue              Master Document Number
+
