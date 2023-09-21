@@ -21,7 +21,7 @@ step 1
 step 2
     [Documentation]             Create a new Master Documents record. On ‘Record Type’ select “Simple” value and click next. Verify that the following fields are required for saving the record: Document Name Document Type Department Business Unit
     Click New Master Document type Simple
-    verify the fields are required
+    verify the fields are required for simple
 
 step 3
     [Documentation]             Fill in the required fields and click Save. *For Business unit set ‘General’ value
@@ -125,4 +125,11 @@ step 26
     VerifyText                  Effective (Simple)          anchor=Actions            delay=5s    
 step 27
     [Documentation]            Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number, Last Periodic Review, Next Periodic Review, Review Period, Supplier
-    
+    #need to complete the step
+step 28
+    [Documentation]            Navigate to Master Documents Tab. Create a new Master Documents record. On ‘Record Type’ select “Controlled” value and click Next. ‘Document Name’: Temp1 'Periodic Review Required' checked ‘Review Period field is populated with "36" value. Verify that the following fields are required for saving the record: Document Name Document Type Department Business Unit Is this a form or a translation?
+    LaunchApp                  Master Documents
+    Click New Master Document type Controlled
+    ClickText                  *Document Name’
+    ClickCheckbox              Periodic Review Required                on
+
