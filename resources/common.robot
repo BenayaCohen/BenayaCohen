@@ -134,7 +134,7 @@ Click New Master Document type Controlled
     ClickText                   Next
 
 Click New Master Document type Simple 
-    ClickText                   New                         anchor=Import
+    ClickText                   New                         anchor=Import               delay=5s
     Verify Dialog Title New Master Document
     ClickText                   Simple
     ClickText                   Next
@@ -144,12 +144,19 @@ Verify Dialog Title New Master Document
     VerifyText                  New Master Document
     Use Modal                   Off
 
-verify the fields are required
+verify the fields are required for simple
     save the record
     VerifyText                  Document Name               anchor=Review the following fields                      delay=3s
     VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields
+verify the fields are required for Controlled
+    save the record
+    VerifyText                  Document Name               anchor=Review the following fields                      delay=3s
+    VerifyText                  Document Type               anchor=Review the following fields
+    VerifyText                  Business Unit               anchor=Review the following fields
+    verify text                 Department                  anchor=Review the following fields
+    VerifyText                  Is this a form or a translation?                        anchor=Review the following fields
 Sign with admin    
     TypeText                    User                        ${username_admin}           delay=1s
     TypeText                    User Password               ${password_admin}
