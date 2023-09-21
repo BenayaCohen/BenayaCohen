@@ -108,14 +108,21 @@ step 23
     ClickText                   Edit                        anchor=Sharing
     TypeText                    Document Legacy Number      ${EMPTY}
     save the record
-    QVision.VerifyText          'Legacy Document' is required, when 'Override Master Document' is checked    
-    
+    VerifyText                  Legacy Document
 
-   
 step 24
     [Documentation]             Delete the values from both 'Override Master Document Number' and 'Document Legacy Number' fields and click Save
     UseModal                    on
     ClickCheckbox               Override Master Document Number                         off
     save the record
-
-
+step 25
+    [Documentation]             Navigate to the Document Revision record. Promote the record to the following state: Effective (Simple)
+    #need to verify the script
+    promote simpel record to effective
+step 26
+    [Documentation]             Navigate back to the Master Document Record Verify that the Master Document is in the following state:
+    ClickElement                (//div[@class\='slds-grid'])        anchor=Master Document                           
+    VerifyText                  Effective (Simple)          anchor=Actions            delay=5s    
+step 27
+    [Documentation]            Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number, Last Periodic Review, Next Periodic Review, Review Period, Supplier
+    
