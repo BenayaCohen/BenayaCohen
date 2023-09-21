@@ -130,6 +130,8 @@ step 28
     [Documentation]            Navigate to Master Documents Tab. Create a new Master Documents record. On ‘Record Type’ select “Controlled” value and click Next. ‘Document Name’: Temp1 'Periodic Review Required' checked ‘Review Period field is populated with "36" value. Verify that the following fields are required for saving the record: Document Name Document Type Department Business Unit Is this a form or a translation?
     LaunchApp                  Master Documents
     Click New Master Document type Controlled
-    ClickText                  *Document Name’
+    ClickText                  *Document Name’                        test
     ClickCheckbox              Periodic Review Required                on
+    save the record
+    verify the fields are required for Controlled
 
