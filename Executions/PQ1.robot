@@ -7,6 +7,7 @@
 *** Settings ***
 Resource                        ../resources/common.robot
 Library                         DataDriver                  file=edit_fields.csv
+Library                         QVision
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
@@ -91,14 +92,30 @@ step 19
     VerifyPickList              Document Subtype
 step 20
     [Documentation]             Click 'Edit' and populate 'Document Legacy Number' field.
-    #problem with the script
-    TypeText                    Document Legacy Number      123
+    TypeText                    Document Legacy Number      1236
     save the record
 step 21
-    [Documentation]            Click 'Edit' and populate the 'Override Master Document Number' checkbox with TRUE value.
-    ClickText                  Edit
-    ClickCheckbox              Override Master Document Number        on
+    [Documentation]             Click 'Edit' and populate the 'Override Master Document Number' checkbox with TRUE value.
+    ClickText                   Edit                        anchor=Sharing
+    UseModal                    on
+    ClickCheckbox               Override Master Document Number                         on
+    save the record
 step 22
-    [Documentation]            Verify that 'Master Document Number' field was automatically populated according to 'Document Legacy Number' field.
-    GetFieldValue              Master Document Number
+    [Documentation]             Verify that 'Master Document Number' field was automatically populated according to 'Document Legacy Number' field.
+    GetFieldValue               Master Document Number
+step 23
+    [Documentation]             Click ‘Edit’, delete the value 'Document Legacy Number' field and click Save
+    ClickText                   Edit                        anchor=Sharing
+    TypeText                    Document Legacy Number      ${EMPTY}
+    save the record
+    QVision.VerifyText                  "'Legacy Document' is required, when 'Override Master Document' is checked"    
+    
+
+   
+step 24
+    [Documentation]             Delete the values from both 'Override Master Document Number' and 'Document Legacy Number' fields and click Save
+    UseModal                    on
+    ClickCheckbox               Override Master Document Number                         off
+    save the record
+
 
