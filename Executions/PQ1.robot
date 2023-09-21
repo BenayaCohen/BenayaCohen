@@ -108,7 +108,7 @@ step 23
     ClickText                   Edit                        anchor=Sharing
     TypeText                    Document Legacy Number      ${EMPTY}
     save the record
-    QVision.VerifyText                  "'Legacy Document' is required, when 'Override Master Document' is checked"    
+    QVision.VerifyText          'Legacy Document' is required, when 'Override Master Document' is checked    
     
 
    
