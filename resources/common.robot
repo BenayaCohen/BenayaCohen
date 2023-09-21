@@ -20,7 +20,7 @@ ${BASE_IMAGE_PATH}
 Setup Browser
     # Setting search order is Not really needed here, but given as an example
     # if you need to use multiple libraries containing keywords with duplicate names
-    Set Library Search Order    QForce                      QWeb                        
+    Set Library Search Order    QForce                      QWeb
     Open Browser                about:blank                 ${BROWSER}
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
@@ -159,3 +159,12 @@ Sign with admin
     VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.    delay=3s
 save the record
     ClickText                   Save                        partial_match=False         delay=3s
+promote simpel record to effective
+    ClickText                   Actions
+    ClickText                   Approve
+    TypeText                    Description of Change       test                        delay=3s
+    TypeText                    Rationale of Revision       test
+    ComboBox                    Search People...            Admin User
+    ClickText                   Next
+    VerifyText                  E-Signature for Approve
+    Sign with admin
