@@ -24,8 +24,6 @@ Prerequisites 1
     save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
-
-
     Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
@@ -39,30 +37,21 @@ Prerequisites 1
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
-
-
     ClickText                   Actions                     partial_match=False         delay=12s
     QVision.ClickText           Sign
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-
-
     ClickText                   Actions                     partial_match=False         delay=12s
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-
-
     ClickText                   Actions                     partial_match=False         delay=12s
     ClickText                   Start Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-
     ClickText                   Actions
     ClickText                   QA Approval - Skip Training                             partial_match=False    delay=12s
     TypeText                    Comments                    test
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-
-
 Prerequisites 2
     [Documentation]             One Master Document, Record type: “Simple”, Name: Form1, Document Type: “Form”, Business Unit: “General”, in “Opened” state, related to Document Revision record that the tested user is not its owner exist in the system.
     LaunchApp                   Master Documents
@@ -77,7 +66,6 @@ Prerequisites 2
     ClickText                   Edit Revision Owner
     ComboBox                    Search People...            Standard User
     ClickText                   Save
-
 Prerequisites 3
     [Documentation]             One protocol (Training Effectiveness) with at least one question and passing score, in state opened, exists in the system
     LaunchApp                   Protocols
