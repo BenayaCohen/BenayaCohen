@@ -175,3 +175,60 @@ promote simpel record to effective
     ClickText                   Next
     VerifyText                  E-Signature for Approve
     Sign with admin
+
+
+Enter Form New Protocol Electronic Form Protocol
+
+    [Documentation]             Use this keyword to enter the entire form, first arguments are mandatory fields followed by optional ones
+    ...                         checkbox accepts argument value on or off
+    [Arguments]                 ${protocol_name}            ${business_unit}            ${protocol_execution_style}                             ${additional_protocol_name}=${EMPTY}                    ${classification}=${EMPTY}                              ${rich_description}=${EMPTY}                            ${elements_per_page}=${EMPTY}                           ${passing_score}=${EMPTY}                           ${right_to_left}=${EMPTY}    ${version}=${EMPTY}    ${show_exam_summary}=${EMPTY}    ${external_sharing}=${EMPTY}    ${account}=${EMPTY}    ${supplier}=${EMPTY}
+
+    # Mandatory fields and arguments first
+    Enter Protocol Name         ${protocol_name}
+    Select Business Unit        ${business_unit}
+    Select Protocol Execution Style                         ${protocol_execution_style}
+
+    # Now the optional fields, default value is ${EMPTY}, let's skip these when not provided
+    IF                          '${additional_protocol_name}'!='${EMPTY}'
+        Enter Additional Protocol Name                      ${additional_protocol_name}
+    END
+
+    IF                          '${classification}'!='${EMPTY}'
+        Select Classification                               ${classification}
+    END
+
+    IF                          '${rich_description}'!='${EMPTY}'
+        Enter Rich Description                              ${rich_description}
+    END
+
+    IF                          '${elements_per_page}'!='${EMPTY}'
+        Enter Elements Per Page                             ${elements_per_page}
+    END
+
+    IF                          '${passing_score}'!='${EMPTY}'
+        Enter Passing Score     ${${passing_score}}
+    END
+
+    IF                          '${right_to_left}'!='${EMPTY}'
+        Select Right to Left    ${right_to_left}
+    END
+
+    IF                          '${version}'!='${EMPTY}'
+        Enter Version           ${version}
+    END
+
+    IF                          '${show_exam_summary}'!='${EMPTY}'
+        Select Show Exam Summary                            ${show_exam_summary}
+    END
+
+    IF                          '${external_sharing}'!='${EMPTY}'
+        Select External Sharing                             ${external_sharing}
+    END
+
+    IF                          '${account}'!='${EMPTY}'
+        Search Account          ${account}
+    END
+
+    IF                          '${supplier}'!='${EMPTY}'
+        Search Supplier         ${supplier}
+    END
