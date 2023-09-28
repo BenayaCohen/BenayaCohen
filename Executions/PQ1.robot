@@ -239,6 +239,7 @@ step 50
     save the record
 step 51
     [Documentation]             Click 'Edit' and populate ‘Periodic Review Required’ to check and ‘Review Period to 36. Click Save.
+    ClickText                   Edit                        anchor=Sharing
     UseModal                    on
     ClickCheckbox               periodic Review Required    off
     TypeText                    Review Period               36
@@ -253,5 +254,5 @@ step 53
     [Documentation]             Click Cancel and Edit,      Update ‘Is this a form or a translation?’ field to ‘Yes’ and click Save
     ClickText                   Cancel
     ClickText                   Edit                        anchor=Sharing              delay=2s
-    PickList                    *Is this a Form or Translation?                        yes
+    PickList                    *Is this a Form or Translation?                         yes
     save the record
