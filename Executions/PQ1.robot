@@ -203,6 +203,7 @@ step 44
     [Documentation]             Check the ‘Is Template’ checkbox. Finally, click Save
     UseModal                    on
     ClickCheckbox               Is Template                 on
+    save the record
 step 45
     [Documentation]             Update the “Training Effectiveness Protocol” with opened protocol
     ComboBox                    Search Protocols...         ProTest2
