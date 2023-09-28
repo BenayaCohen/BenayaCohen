@@ -152,10 +152,10 @@ verify the fields are required for simple
     verify text                 Department                  anchor=Review the following fields
 verify the fields are required for Controlled
     save the record
-    VerifyText                  Document Name               anchor=Review the following fields                      delay=3s
-    VerifyText                  Document Type               anchor=Review the following fields
+    VerifyText                  Document Name               anchor=Review the following fields                      delay=2s
+    VerifyText                  Document Type               anchor=Review the following fields                      
     VerifyText                  Business Unit               anchor=Review the following fields
-    verify text                 Department                  anchor=Review the following fields
+    verify text                 Department                  anchor=Review the following fields                      delay=3s
     VerifyText                  Is this a form or a translation?                        anchor=Review the following fields
 Sign with admin    
     TypeText                    User                        ${username_admin}           delay=1s
