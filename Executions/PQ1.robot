@@ -208,6 +208,8 @@ step 45
     [Documentation]             Update the “Training Effectiveness Protocol” with opened protocol
     ClickText                   Edit Training Effectiveness Protocol
     ComboBox                    Search Protocols...                         ProTest2
+step 46
+    [Documentation]            Click ‘Change’ next to Owner field. Select another owner using the lookup search. Finally click Change Owner
 
 
 
