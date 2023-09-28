@@ -121,17 +121,17 @@ step 25
     promote simpel record to effective
 step 26
     [Documentation]             Navigate back to the Master Document Record Verify that the Master Document is in the following state:
-    ClickElement                (//div[@class\='slds-grid'])        anchor=Master Document                           
-    VerifyText                  Effective (Simple)          anchor=Actions            delay=5s    
+    ClickElement                (//div[@class\='slds-grid'])                            anchor=Master Document
+    VerifyText                  Effective (Simple)          anchor=Actions              delay=5s
 step 27
-    [Documentation]            Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number, Last Periodic Review, Next Periodic Review, Review Period, Supplier
+    [Documentation]             Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number, Last Periodic Review, Next Periodic Review, Review Period, Supplier
     #need to complete the step
 step 28
-    [Documentation]            Navigate to Master Documents Tab. Create a new Master Documents record. On ‘Record Type’ select “Controlled” value and click Next. ‘Document Name’: Temp1 'Periodic Review Required' checked ‘Review Period field is populated with "36" value. Verify that the following fields are required for saving the record: Document Name Document Type Department Business Unit Is this a form or a translation?
-    LaunchApp                  Master Documents
+    [Documentation]             Navigate to Master Documents Tab. Create a new Master Documents record. On ‘Record Type’ select “Controlled” value and click Next. ‘Document Name’: Temp1 'Periodic Review Required' checked ‘Review Period field is populated with "36" value. Verify that the following fields are required for saving the record: Document Name Document Type Department Business Unit Is this a form or a translation?
+    LaunchApp                   Master Documents
     Click New Master Document type Controlled
-    ClickText                  *Document Name                       test
-    ClickCheckbox              Periodic Review Required                on
+    typeText                    *Document Name              test
+    ClickCheckbox               Periodic Review Required    on
     save the record
     verify the fields are required for Controlled
 
