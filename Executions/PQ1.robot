@@ -227,7 +227,13 @@ step 48
     ClickCheckbox               TEST 5                      on
     ClickText                   Save All                    anchor=Cancel
 step 49
-    [Documentation]            Click ‘Edit’, delete the value from ‘Review Period ' field and click Save
-    ClickText                  Edit            anchor=Sharing
-    TypeText                   Review Period        ${EMPTY}
+    [Documentation]             Click ‘Edit’, delete the value from ‘Review Period ' field and click Save
+    ClickText                   Edit                        anchor=Sharing
+    TypeText                    Review Period               ${EMPTY}
+    save the record
+    # ACC = An error message is displayed: “Review Period field is mandatory”
+step 50
+    [Documentation]             Delete the check mark from ‘Periodic Review Required’ and click Save
+    UseModal                    on
+    ClickCheckbox               eriodic Review Required     off
     save the record
