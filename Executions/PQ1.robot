@@ -207,10 +207,12 @@ step 44
 step 45
     [Documentation]             Update the “Training Effectiveness Protocol” with opened protocol
     ClickText                   Edit Training Effectiveness Protocol
-    ComboBox                    Search Protocols...                         ProTest2
+    ComboBox                    Search Protocols...         ProTest2
 step 46
-    [Documentation]            Click ‘Change’ next to Owner field. Select another owner using the lookup search. Finally click Change Owner
-
-
+    [Documentation]             Click ‘Change’ next to Owner field. Select another owner using the lookup search. Finally click Change Owner
+    ClickText                   Change Owner
+    UseModal                    On
+    ComboBox                    Search Users...             Standard User
+    ClickText                   Change Owner
 
 
