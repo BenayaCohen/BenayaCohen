@@ -133,7 +133,7 @@ step 28
     typeText                    *Document Name              test
     ScrollTo                    Document Dates
     verifyCheckbox              Periodic Review Required    on    
-    QVison.VerifyText                  36                                              
+    QVision.VerifyText                36                                              
     save the record
     verify the fields are required for Controlled
 
