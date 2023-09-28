@@ -228,5 +228,6 @@ step 48
     ClickText                   Save All                    anchor=Cancel
 step 49
     [Documentation]            Click ‘Edit’, delete the value from ‘Review Period ' field and click Save
-    ClickText                  Edit
+    ClickText                  Edit            anchor=Sharing
     TypeText                   Review Period        ${EMPTY}
+    save the record
