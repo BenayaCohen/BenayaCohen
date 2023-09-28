@@ -215,9 +215,14 @@ step 46
     ComboBox                    Search Users...             Standard User
     ClickText                   Change Owner                anchor=Cancel
 step 47
-    [Documentation]          Click ‘Change’ next to Owner field. Select the tested user as owner using the lookup search. Finally click Change Owner
+    [Documentation]             Click ‘Change’ next to Owner field. Select the tested user as owner using the lookup search. Finally click Change Owner
     ClickText                   Change Owner
     UseModal                    On
     ComboBox                    Search Users...             Admin User
-    ClickText                   Change Owner                anchor=Cancel      
+    ClickText                   Change Owner                anchor=Cancel
 step 48
+    [Documentation]             Navigate to Select Training Plan section and click ‘Manage’. Select value from the list and finally click Save All
+    ClickText                   Manage                      anchor=Training Plan
+    UseModal                    on
+    ClickCheckbox               TEST 5                      on
+    ClickText                   Save All                    anchor=Cancel
