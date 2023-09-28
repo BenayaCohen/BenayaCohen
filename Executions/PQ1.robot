@@ -138,4 +138,26 @@ step 28
     verify the fields are required for Controlled
 
 step 29 
-    [Documentation]
+    [Documentation]            Fill in the required fields and click Save. *select ‘No’ for ‘Is this a form or translation?’ field **For ‘Business Unit’ field is select "General" value.
+    PickList                    *Document Type              Protocol                    anchor=Document Type
+    PickList                    *Business Unit              General
+    PickList                    *Is this a Form or Translation?                         No
+    ComboBox                    Search Departments...       test
+    save the record
+step 30
+    [Documentation]        From the Life cycle path verify that the following action is available: Cancel
+    ClickText                   Actions                     partial_match=False
+    UseModal                    on
+    VerifyText                  Cancel                      anchor=Opened
+steps 31
+    [Documentation]             From the Life Cycle Path perform the following action: Cancel Verify that the following field is required for saving the record: Comments
+    ClickText                   Cancel
+    required field for Cancel and Re-Open
+step 32    
+    [Documentation]             Fill in the required field and click Next
+    TypeText                    Comments                    test
+    ClickText                   Next
+
+step 33
+    [Documentation]             Fill in the user Alias and password and click "Sign"
+    Sign with admin
