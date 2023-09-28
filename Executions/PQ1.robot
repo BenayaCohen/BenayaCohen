@@ -235,5 +235,23 @@ step 49
 step 50
     [Documentation]             Delete the check mark from ‘Periodic Review Required’ and click Save
     UseModal                    on
-    ClickCheckbox               periodic Review Required     off
+    ClickCheckbox               periodic Review Required    off
+    save the record
+step 51
+    [Documentation]             Click 'Edit' and populate ‘Periodic Review Required’ to check and ‘Review Period to 36. Click Save.
+    UseModal                    on
+    ClickCheckbox               periodic Review Required    off
+    TypeText                    Review Period               36
+    save the record
+step 52
+    [Documentation]             Click Edit, verify that ‘Is this a form or a translation?’ field is populated with ‘No’ Relate a document to ‘Master Document’ field. Finally click Save
+    ClickText                   Edit                        anchor=Sharing
+    GetInputValue               *Is this a Form or Translation?
+    ComboBox                    Search Master Document      TempTest2
+    save the record
+step 53
+    [Documentation]             Click Cancel and Edit,      Update ‘Is this a form or a translation?’ field to ‘Yes’ and click Save
+    ClickText                   Cancel
+    ClickText                   Edit                        anchor=Sharing              delay=2s
+    PickList                    *Is this a Form or Translation?                        yes
     save the record
