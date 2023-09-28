@@ -204,9 +204,8 @@ step 44
     UseModal                    on
     ClickCheckbox               Is Template                 on
 step 45
-    [Documentation]            Update the “Training Effectiveness Protocol” with opened protocol
-    ScrollTo                   Realted Exam
-    ComboBox                    Search Protocols...       ProTest2
+    [Documentation]             Update the “Training Effectiveness Protocol” with opened protocol
+    ComboBox                    Search Protocols...         ProTest2
 
 
 
