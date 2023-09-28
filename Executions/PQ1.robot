@@ -206,7 +206,8 @@ step 44
     save the record
 step 45
     [Documentation]             Update the “Training Effectiveness Protocol” with opened protocol
-    ComboBox                    Search Protocols...         ProTest2
+    ClickText                   Edit Training Effectiveness Protocol
+    ComboBox                    Search Protocols...                         ProTest2
 
 
 
