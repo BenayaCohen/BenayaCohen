@@ -161,3 +161,29 @@ step 32
 step 33
     [Documentation]             Fill in the user Alias and password and click "Sign"
     Sign with admin
+step 34
+    [Documentation]            Verify that all the fields are locked for editing except for the following fields: Training Effectiveness Protocol, Master Document Number Owner, Effective Date, File URL, Keywords, PDF URL, Revision Number, PDF Link, Last Periodic Review, Next Periodic Review, Review Period, Supplier
+    ClickText                  Edit
+    #need to complete the step
+step 35
+    [Documentation]             From the Life Cycle Path verify that the following action is available: Re-Open
+    ClickText                   Actions
+    VerifyText                  Re-Open                     anchor=Canceled
+step 36
+    [Documentation]             From the Life Cycle Path perform the following action: Re-Open Verify that the following field is required for saving the record: Comments
+    ClickText                   Re-Open
+    required field for Cancel and Re-Open
+
+step 37
+    [Documentation]             Fill in the required field and click Save
+    TypeText                    Comments                    test
+    ClickText                   Save                        delay=2s
+step 38
+    [Documentation]             Locate a file to upload. From ‘File Preview’ tab click or Drag a file to the Initial File Upload outlined section.
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
+step 39
+    [Documentation]             Click on ‘Done’ button.
+    ClickText                   Done
+step 40
+    [Documentation]             Navigate back to ‘Master Document’ record. 
+    ClickElement                (//span[@id\='window'])     timeout=10                  delay=5s
