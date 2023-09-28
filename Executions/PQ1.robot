@@ -138,14 +138,14 @@ step 28
     verify the fields are required for Controlled
 
 step 29 
-    [Documentation]            Fill in the required fields and click Save. *select ‘No’ for ‘Is this a form or translation?’ field **For ‘Business Unit’ field is select "General" value.
+    [Documentation]             Fill in the required fields and click Save. *select ‘No’ for ‘Is this a form or translation?’ field **For ‘Business Unit’ field is select "General" value.
     PickList                    *Document Type              Protocol                    anchor=Document Type
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
     ComboBox                    Search Departments...       test
     save the record
 step 30
-    [Documentation]        From the Life cycle path verify that the following action is available: Cancel
+    [Documentation]             From the Life cycle path verify that the following action is available: Cancel
     ClickText                   Actions                     partial_match=False
     UseModal                    on
     VerifyText                  Cancel                      anchor=Opened
@@ -162,8 +162,8 @@ step 33
     [Documentation]             Fill in the user Alias and password and click "Sign"
     Sign with admin
 step 34
-    [Documentation]            Verify that all the fields are locked for editing except for the following fields: Training Effectiveness Protocol, Master Document Number Owner, Effective Date, File URL, Keywords, PDF URL, Revision Number, PDF Link, Last Periodic Review, Next Periodic Review, Review Period, Supplier
-    ClickText                  Edit
+    [Documentation]             Verify that all the fields are locked for editing except for the following fields: Training Effectiveness Protocol, Master Document Number Owner, Effective Date, File URL, Keywords, PDF URL, Revision Number, PDF Link, Last Periodic Review, Next Periodic Review, Review Period, Supplier
+    ClickText                   Edit
     #need to complete the step
 step 35
     [Documentation]             From the Life Cycle Path verify that the following action is available: Re-Open
@@ -185,5 +185,29 @@ step 39
     [Documentation]             Click on ‘Done’ button.
     ClickText                   Done
 step 40
-    [Documentation]             Navigate back to ‘Master Document’ record. 
+    [Documentation]             Navigate back to ‘Master Document’ record.
     ClickElement                (//span[@id\='window'])     timeout=10                  delay=5s
+step 41
+    [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.2
+    #appendix
+step 42
+    [Documentation]             Click 'Edit' and verify that the following fields are editable: Document Name (Text) Master Document Number (Text) Document Type (Picklist) Document Sub Type (Picklist) Document Legacy Number (Text) Is Template (Checkbox) Override Master Document Number (Checkbox) Department (Lookup: Department) Classification (Picklist) Keywords (Text) Business Unit (Multi-Picklist) Is this a form or a translation? (Picklist) Master Document (Lookup: Master Document) Language (Picklist) Additional Document Name (Text) Template Document (Picklist) Effective Date (Date) Revision Number (Text) Periodic Review Required (Checkbox) Last Periodic Review (Date) Review Period (Number) Training Effectiveness Protocol (Lookup: Protocol) Account (Lookup: Account) Supplier (Lookup: Supplier) File URL (URL) PDF URL (URL) Finally click Cancel.
+    ClickText                   Edit
+    #need to complete the step
+step 43      
+    [Documentation]             Click Edit. On Document Type choose value: ‘Policy’, Verify that “Document Subtype” field is editable Select ‘Validation Policy’
+    ClickText                   Edit                        anchor=Sharing
+    PickList                    *Document Type              Policy                      delay=1s
+    PickList                    Document Subtype            Validation Policy
+step 44
+    [Documentation]             Check the ‘Is Template’ checkbox. Finally, click Save
+    UseModal                    on
+    ClickCheckbox               Is Template                 on
+step 45
+    [Documentation]            Update the “Training Effectiveness Protocol” with opened protocol
+    ScrollTo                   Realted Exam
+    ComboBox                    Search Protocols...       ProTest2
+
+
+
+
