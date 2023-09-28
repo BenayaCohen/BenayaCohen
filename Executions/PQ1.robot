@@ -213,6 +213,11 @@ step 46
     ClickText                   Change Owner
     UseModal                    On
     ComboBox                    Search Users...             Standard User
+    ClickText                   Change Owner                anchor=Cancel
+step 47
+    [Documentation]          Click ‘Change’ next to Owner field. Select the tested user as owner using the lookup search. Finally click Change Owner
     ClickText                   Change Owner
-
-
+    UseModal                    On
+    ComboBox                    Search Users...             Admin User
+    ClickText                   Change Owner                anchor=Cancel      
+step 48
