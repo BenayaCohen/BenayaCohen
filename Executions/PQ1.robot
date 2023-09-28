@@ -241,7 +241,7 @@ step 51
     [Documentation]             Click 'Edit' and populate ‘Periodic Review Required’ to check and ‘Review Period to 36. Click Save.
     ClickText                   Edit                        anchor=Sharing
     UseModal                    on
-    ClickCheckbox               periodic Review Required    off
+    ClickCheckbox               periodic Review Required    on
     TypeText                    Review Period               36
     save the record
 step 52
