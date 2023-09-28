@@ -235,5 +235,5 @@ step 49
 step 50
     [Documentation]             Delete the check mark from ‘Periodic Review Required’ and click Save
     UseModal                    on
-    ClickCheckbox               eriodic Review Required     off
+    ClickCheckbox               periodic Review Required     off
     save the record
