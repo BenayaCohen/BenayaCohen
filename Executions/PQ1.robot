@@ -132,7 +132,7 @@ step 28
     Click New Master Document type Controlled
     typeText                    *Document Name              test
     ScrollTo                    Document Dates
-    verifyCheckbox              Periodic Review Required    on
+    verifyCheckbox              Periodic Review Required    on    
     VerifyText                  36                                              
     save the record
     verify the fields are required for Controlled
