@@ -132,6 +132,7 @@ step 28
     Click New Master Document type Controlled
     typeText                    *Document Name              test
     ClickCheckbox               Periodic Review Required    on
+    GetFieldValue               Review Period               36
     save the record
     verify the fields are required for Controlled
 
