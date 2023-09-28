@@ -132,8 +132,8 @@ step 28
     Click New Master Document type Controlled
     typeText                    *Document Name              test
     ScrollTo                    Document Dates
-    verifyCheckbox              Periodic Review Required    on    
-    QVision.VerifyText                36                                              
+    VerifyCheckbox              Periodic Review Required
+    GetInputValue               Review Period
     save the record
     verify the fields are required for Controlled
 
