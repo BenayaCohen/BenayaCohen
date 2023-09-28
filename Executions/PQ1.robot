@@ -226,3 +226,7 @@ step 48
     UseModal                    on
     ClickCheckbox               TEST 5                      on
     ClickText                   Save All                    anchor=Cancel
+step 49
+    [Documentation]            Click ‘Edit’, delete the value from ‘Review Period ' field and click Save
+    ClickText                  Edit
+    TypeText                   Review Period        ${EMPTY}
