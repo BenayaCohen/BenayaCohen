@@ -80,21 +80,25 @@ NoData
     VerifyNoText                ${data}                     timeout=3                   delay=2
 
  Create simple name  
-    ${SMD_Name_1}=    Generate Random String  4   [NUMBERS]         
-    ${SMD_Name_2}=    Catenate                Simple BC    ${SMD_Name_1}        
-    TypeText     *Document Name               ${SMD_Name_2}
-    
- Create Controlled name  
-    ${CMD_Name_1}=    Generate Random String  4   [NUMBERS]         
-    ${CMD_Name_2}=    Catenate                Controlled BC    ${SMD_Name_1}        
-    TypeText     *Document Name               ${SMD_Name_2}
+    ${SMD_Name_1}=              Generate Random String      4                           [NUMBERS]
+    ${SMD_Name_2}=              Catenate                    Simple BC                   ${SMD_Name_1}
+    TypeText                    *Document Name              ${SMD_Name_2}
 
-Policy
+ Create Controlled name  
+    ${CMD_Name_1}=              Generate Random String      4                           [NUMBERS]
+    ${CMD_Name_2}=              Catenate                    Controlled BC               ${CMD_Name_1}
+    TypeText                    *Document Name              ${CMD_Name_2}
+
+Create training effective name
+    ${TE_Name_1}=               Generate Random String      4                           [NUMBERS]
+    ${TE_Name_2}=               Catenate                    Controlled BC               ${TE_Name_1}
+    TypeText                    *Protocol Name              ${TE_Name_2}
+    
     [Documentation]             create a master doument type Policy
     LaunchApp                   Master Documents
     Sleep                       5
     Click New Master Document type Controlled
-    Create Controlled name  
+    Create Controlled name
     PickList                    *Document Type              Policy
     PickList                    Document Sub Type           Validation Policy
     PickList                    *Business Unit              General
@@ -102,11 +106,11 @@ Policy
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     save the record
-   
+
 
 Appendix
     [Documentation]             create a master doument type Appendix
-    Create simple name  
+    Create simple name
     PickList                    *Document Type              Appendix
     PickList                    *Business Unit              General
     ComboBox                    Search Departments...       test
@@ -116,7 +120,7 @@ Worksheet
     [Documentation]             create a master doument type Worksheet
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
-    Create Controlled name  
+    Create Controlled name
     PickList                    *Document Type              Worksheet
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
@@ -130,7 +134,7 @@ Protocol
     [Documentation]             create a master doument type Protocol
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
-    Create Controlled name  
+    Create Controlled name
     PickList                    *Document Type              Protocol                    anchor=Document Type
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
