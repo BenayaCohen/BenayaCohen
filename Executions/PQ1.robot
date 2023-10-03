@@ -134,6 +134,8 @@ step 28
     typeText                    *Document Name              test
     ScrollTo                    Document Dates
     VerifyCheckbox              Periodic Review Required
+    ${PR}=                      GetInputValue               Review Period
+    VerifyText                  ${PR}                       anchor=Review Period           
     GetInputValue               Review Period
     save the record
     verify the fields are required for Controlled
@@ -164,8 +166,9 @@ step 33
     Sign with admin
 step 34
     [Documentation]             Verify that all the fields are locked for editing except for the following fields: Training Effectiveness Protocol, Master Document Number Owner, Effective Date, File URL, Keywords, PDF URL, Revision Number, PDF Link, Last Periodic Review, Next Periodic Review, Review Period, Supplier
-    ClickText                   Edit
-    #need to complete the step
+    ClickText                   Edit            anchor=Sharing
+    Create simple name
+
 step 35
     [Documentation]             From the Life Cycle Path verify that the following action is available: Re-Open
     ClickText                   Actions
