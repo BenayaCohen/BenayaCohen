@@ -79,12 +79,22 @@ VerifyStage
 NoData
     VerifyNoText                ${data}                     timeout=3                   delay=2
 
+ Create simple name  
+    ${SMD_Name_1}=    Generate Random String  4   [NUMBERS]         
+    ${SMD_Name_2}=    Catenate                Simple Master Document    ${SMD_Name_1}        
+    TypeText     *Document Name               ${SMD_Name_2}
+    
+ Create Controlled name  
+    ${CMD_Name_1}=    Generate Random String  4   [NUMBERS]         
+    ${CMD_Name_2}=    Catenate                Controlled Master Document    ${SMD_Name_1}        
+    TypeText     *Document Name               ${SMD_Name_2}
+
 Policy
     [Documentation]             create a master doument type Policy
     LaunchApp                   Master Documents
     Sleep                       5
     Click New Master Document type Controlled
-    TypeText                    *Document Name              TempTest1
+    Create Controlled name  
     PickList                    *Document Type              Policy
     PickList                    Document Sub Type           Validation Policy
     PickList                    *Business Unit              General
@@ -96,7 +106,7 @@ Policy
 
 Appendix
     [Documentation]             create a master doument type Appendix
-    TypeText                    *Document Name              OQ1MD1 test7
+    Create simple name  
     PickList                    *Document Type              Appendix
     PickList                    *Business Unit              General
     ComboBox                    Search Departments...       test
@@ -106,7 +116,7 @@ Worksheet
     [Documentation]             create a master doument type Worksheet
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
-    TypeText                    *Document Name              OQ1MD1 test7
+    Create Controlled name  
     PickList                    *Document Type              Worksheet
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
@@ -114,16 +124,13 @@ Worksheet
     save the record
     VerifyText                  WKS                         anchor=Master Document Number
 
- Create simple name  
-    ${SMD_Name_1}=    Generate Random String  4   [NUMBERS]         
-    ${SMD_Name_2}=    Catenate                Simple Master Document    ${SMD_Name_1}        
-    TypeText     *Document Name               ${SMD_Name_2}
+
 
 Protocol
     [Documentation]             create a master doument type Protocol
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
-    TypeText                    *Document Name              OQ1MD1 test7
+    Create Controlled name  
     PickList                    *Document Type              Protocol                    anchor=Document Type
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
