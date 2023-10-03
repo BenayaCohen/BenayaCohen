@@ -247,9 +247,12 @@ step 51
 step 52
     [Documentation]             Click Edit, verify that ‘Is this a form or a translation?’ field is populated with ‘No’ Relate a document to ‘Master Document’ field. Finally click Save
     ClickText                   Edit                        anchor=Sharing
-    GetInputValue               *Is this a Form or Translation?
-    ComboBox                    Search Master Document      TempTest2
+    VerifyText                  No                          anchor=*Is this a Form or Translation?
+    ComboBox                    Search Master Documents...                              TempTest2
     save the record
+    # ACC = VerifyText                 This record was not defined as a form, so Parent Record is not required. Please remove the associated Master document 
+    #${options}=                  GetPickList                 *Is this a Form or Translation?  
+            
 step 53
     [Documentation]             Click Cancel and Edit,      Update ‘Is this a form or a translation?’ field to ‘Yes’ and click Save
     ClickText                   Cancel
