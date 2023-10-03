@@ -274,3 +274,4 @@ step 56
     # need to complete the step
 step 57
     [Documentation]            Verify that ‘Effective Date’ field is populated with the current date
+    GetFieldValue              Effective Date (GMT)
