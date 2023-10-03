@@ -196,6 +196,7 @@ promote Controlled record to effective
     VerifyText                  E-Signature for Send for Review
     Sign with admin
     ClickText                   Actions                     partial_match=False         delay=12s
+    HoverText                   Pending Review              delay=2s
     ClickText                   Sign
     Wait Until Keyword Succeeds                             60                          5                           Sign with admin
     ClickText                   Actions                     partial_match=False         delay=12s
