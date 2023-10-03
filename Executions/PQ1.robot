@@ -278,4 +278,4 @@ step 57
     GetFieldValue              Effective Date (GMT)
 step 58
     [Documentation]            Verify that ‘Next Periodic Review’ field populated with current date + Review Period
-    Evaluate
+    
