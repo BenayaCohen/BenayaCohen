@@ -181,6 +181,14 @@ promote simpel record to effective
     VerifyText                  E-Signature for Approve
     Sign with admin
 
+Navigate to Master Document
+    ClickElement                (//div[@class\='slds-grid'])                            timeout=10                  delay=5s
+
+
+Navigate to Document Revision
+    ClickElement                (//span[@title\='Document Revision'])                   timeout=10                  delay=3s
+
+
 promote Controlled record to effective
     ClickText                   Actions                     delay=5s
     ClickText                   Send for Review
