@@ -73,7 +73,7 @@ Prerequisites 3
     clickText                   New                         delay=3s
     ClickText                   Training Effectiveness      anchor=An electronic protocol designed as an exam, can be used as a verification for training effectiveness.
     ClickText                   Next
-    TypeText                    *Protocol Name              ProTest2
+    Create training effective name
     TypeText                    *Execution Limit            1
     TypeText                    *Passing Score              70
     save the record
