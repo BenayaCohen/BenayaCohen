@@ -57,7 +57,7 @@ Prerequisites 2
     [Documentation]             One Master Document, Record type: “Simple”, Name: Form1, Document Type: “Form”, Business Unit: “General”, in “Opened” state, related to Document Revision record that the tested user is not its owner exist in the system.
     LaunchApp                   Master Documents
     Click New Master Document type Simple
-    TypeText                    *Document Name              OQ1MD1 test7
+    Create simple name
     PickList                    *Document Type              Form
     PickList                    *Business Unit              General
     ComboBox                    Search Departments...       test
