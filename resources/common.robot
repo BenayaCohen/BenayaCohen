@@ -114,6 +114,10 @@ Worksheet
     save the record
     VerifyText                  WKS                         anchor=Master Document Number
 
+ Create simple name  
+    ${SMD_Name_1}=    Generate Random String  4   [NUMBERS]         
+    ${SMD_Name_2}=    Catenate                Simple Master Document    ${SMD_Name_1}        
+    TypeText     *Document Name               ${SMD_Name_2}
 
 Protocol
     [Documentation]             create a master doument type Protocol
