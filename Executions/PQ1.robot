@@ -265,3 +265,7 @@ step 54
     ClickText                 Cancel
     ClickElement              (//span[@title\='Document Revision'])     timeout=10                  delay=3s     
     promote Controlled record to effective        
+step 55
+    [Documentation]            Navigate back to the Master Document Record Verify that the Master Document is in the following state: Effective
+    ClickElement               (//span[@id\='window'])     timeout=10                  delay=5s
+    VerifyText                 Effective                   anchor=Actions
