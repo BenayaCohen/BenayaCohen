@@ -263,4 +263,5 @@ step 53
 step 54
     [Documentation]           Click Cancel and navigate to the Document Revision record. Promote the record to the following state:Effective
     ClickText                 Cancel
-    ClickElement              (//span[@title\='Document Revision'])     timeout=10                  delay=3s             
+    ClickElement              (//span[@title\='Document Revision'])     timeout=10                  delay=3s     
+    promote Controlled record to effective        
