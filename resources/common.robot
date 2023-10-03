@@ -81,12 +81,12 @@ NoData
 
  Create simple name  
     ${SMD_Name_1}=    Generate Random String  4   [NUMBERS]         
-    ${SMD_Name_2}=    Catenate                Simple Master Document    ${SMD_Name_1}        
+    ${SMD_Name_2}=    Catenate                Simple BC    ${SMD_Name_1}        
     TypeText     *Document Name               ${SMD_Name_2}
     
  Create Controlled name  
     ${CMD_Name_1}=    Generate Random String  4   [NUMBERS]         
-    ${CMD_Name_2}=    Catenate                Controlled Master Document    ${SMD_Name_1}        
+    ${CMD_Name_2}=    Catenate                Controlled BC    ${SMD_Name_1}        
     TypeText     *Document Name               ${SMD_Name_2}
 
 Policy
@@ -102,7 +102,7 @@ Policy
     ClickCheckbox               Is Template                 on
     ComboBox                    Search Departments...       test
     save the record
-    #uplode file
+   
 
 Appendix
     [Documentation]             create a master doument type Appendix
