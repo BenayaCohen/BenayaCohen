@@ -263,9 +263,9 @@ step 53
 step 54
     [Documentation]             Click Cancel and navigate to the Document Revision record. Promote the record to the following state:Effective
     ClickText                   Cancel
-    ClickElement                (//span[@title\='Document Revision'])                   timeout=10              delay=3s
+    Navigate to Document Revision
     promote Controlled record to effective
 step 55
     [Documentation]             Navigate back to the Master Document Record Verify that the Master Document is in the following state: Effective
-    ClickElement                (//div[@class\='slds-grid'])                            timeout=10              delay=5s
+    Navigate to Master Document
     VerifyText                  Effective                   anchor=Actions
