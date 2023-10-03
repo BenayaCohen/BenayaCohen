@@ -75,7 +75,7 @@ step 14
     ClickText                   Done
 step 15
     [Documentation]             Navigate back to ‘Master Document’ record. Use the link from compact layout
-    ClickElement                (//span[@id\='window'])     timeout=10                  delay=5s
+    Navigate to Master Document
 step 16
     [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.2
     #appendix 2
@@ -122,7 +122,7 @@ step 25
     promote simpel record to effective
 step 26
     [Documentation]             Navigate back to the Master Document Record Verify that the Master Document is in the following state:
-    ClickElement                (//div[@class\='slds-grid'])                            anchor=Master Document
+    Navigate to Master Document
     VerifyText                  Effective (Simple)          anchor=Actions              delay=5s
 step 27
     [Documentation]             Verify that all the fields are locked for editing except for the following fields: Owner, Effective Date, File URL. Keywords, PDF URL, Revision Number, Last Periodic Review, Next Periodic Review, Review Period, Supplier
@@ -190,7 +190,7 @@ step 39
     ClickText                   Done
 step 40
     [Documentation]             Navigate back to ‘Master Document’ record.
-    ClickElement                (//span[@id\='window'])     timeout=10                  delay=5s
+    Navigate to Master Document
 step 41
     [Documentation]             Verify that the record page layout matches the layout in Appendix A 9.1.1.2
     #appendix
