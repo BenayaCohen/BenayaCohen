@@ -275,3 +275,5 @@ step 56
 step 57
     [Documentation]            Verify that ‘Effective Date’ field is populated with the current date
     GetFieldValue              Effective Date (GMT)
+step 58
+    [Documentation]            Verify that ‘Next Periodic Review’ field populated with current date + Review Period
