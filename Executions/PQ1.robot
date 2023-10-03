@@ -250,12 +250,17 @@ step 52
     VerifyText                  No                          anchor=*Is this a Form or Translation?
     ComboBox                    Search Master Documents...                              TempTest2
     save the record
-    # ACC = VerifyText                 This record was not defined as a form, so Parent Record is not required. Please remove the associated Master document 
+    # ACC - VerifyText                 This record was not defined as a form, so Parent Record is not required. Please remove the associated Master document 
     #${options}=                  GetPickList                 *Is this a Form or Translation?  
             
 step 53
     [Documentation]             Click Cancel and Edit,      Update ‘Is this a form or a translation?’ field to ‘Yes’ and click Save
     ClickText                   Cancel
     ClickText                   Edit                        anchor=Sharing              delay=2s
-    PickList                    *Is this a Form or Translation?                         yes
+    PickList                    *Is this a Form or Translation?                         Yes
     save the record
+    # ACC - VerifyText                  Please associate the Parent of this form
+step 54
+    [Documentation]           Click Cancel and navigate to the Document Revision record. Promote the record to the following state:Effective
+    ClickText                 Cancel
+    ClickElement              (//span[@title\='Document Revision'])     timeout=10                  delay=3s             
