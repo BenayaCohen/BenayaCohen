@@ -269,3 +269,8 @@ step 55
     [Documentation]             Navigate back to the Master Document Record Verify that the Master Document is in the following state: Effective
     Navigate to Master Document
     VerifyText                  Effective                   anchor=Actions
+step 56
+    [Documentation]            Verify that all the fields are locked for editing except for the following fields: Training Effectiveness Protocol, Master Document Number Owner, Effective Date, File URL, Keywords, PDF URL, Revision Number, PDF Link, Last Periodic Review, Next Periodic Review, Review Period, Supplier
+    # need to complete the step
+step 57
+    [Documentation]            Verify that ‘Effective Date’ field is populated with the current date
