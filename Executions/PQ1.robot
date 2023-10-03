@@ -8,6 +8,7 @@
 Resource                        ../resources/common.robot
 Library                         DataDriver                  file=edit_fields.csv
 Library                         QVision
+Library                         DateTime
 Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
@@ -277,3 +278,4 @@ step 57
     GetFieldValue              Effective Date (GMT)
 step 58
     [Documentation]            Verify that ‘Next Periodic Review’ field populated with current date + Review Period
+    Evaluate
