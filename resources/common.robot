@@ -150,22 +150,27 @@ verify the fields are required for simple
     VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields
+
 verify the fields are required for Controlled
     save the record
     VerifyText                  Document Name               anchor=Review the following fields                      delay=2s
-    VerifyText                  Document Type               anchor=Review the following fields                      
+    VerifyText                  Document Type               anchor=Review the following fields
     VerifyText                  Business Unit               anchor=Review the following fields
     verify text                 Department                  anchor=Review the following fields                      delay=3s
-    VerifyText                  Is this a Form or Translation?                        anchor=Review the following fields
+    VerifyText                  Is this a Form or Translation?                          anchor=Review the following fields
+
 Sign with admin    
     TypeText                    User                        ${username_admin}           delay=1s
     TypeText                    User Password               ${password_admin}
     ClickText                   Sign                        anchor=Cancel
+
  required field for Cancel and Re-Open
     ClickText                   Next                        delay=3s
     VerifyText                  The following fields are mandatory in order to promote the record state. Please populate the fields and save in order to continue.    delay=3s
+
 save the record
     ClickText                   Save                        partial_match=False         delay=3s
+
 promote simpel record to effective
     ClickText                   Actions
     ClickText                   Approve
@@ -176,59 +181,89 @@ promote simpel record to effective
     VerifyText                  E-Signature for Approve
     Sign with admin
 
+promote Controlled record to effective
+    ClickText                   Actions                     delay=5s
+    ClickText                   Send for Review
+    VerifyText                  Select Signatories for Revision Review
+    ClickItem                   checkbox                    anchor=Admin User           partial_match=False
+    ClickText                   Next                        partial_match=False         delay=3s
+    ClickItem                   checkbox                    anchor=Admin User           partial_match=False         delay=3s
+    ClickText                   Next                        partial_match=False
+    TypeText                    Description of Change       test                        delay=3s
+    TypeText                    Rationale of Revision       test
+    ComboBox                    Search People...            Admin User
+    ClickText                   Next
+    VerifyText                  E-Signature for Send for Review
+    Sign with admin
+    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Sign
+    Wait Until Keyword Succeeds                             60                          5                           Sign with admin
+    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Send For Approval
+    Wait Until Keyword Succeeds                             60                          5                           Sign with admin
+    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Start Approval
+    Wait Until Keyword Succeeds                             60                          5                           Sign with admin
+    ClickText                   Actions
+    ClickText                   QA Approval - Skip Training                             partial_match=False         delay=12s
+    TypeText                    Comments                    test
+    ClickText                   Next
+    VerifyText                  E-Signature for QA Approval
+    Wait Until Keyword Succeeds                             60                          5                           Sign with admin
 
-# Enter Form New Protocol Electronic Form Protocol
 
-#     [Documentation]             Use this keyword to enter the entire form, first arguments are mandatory fields followed by optional ones
-#     ...                         checkbox accepts argument value on or off
-#     [Arguments]                 ${protocol_name}            ${business_unit}            ${protocol_execution_style}                             ${additional_protocol_name}=${EMPTY}                    ${classification}=${EMPTY}                              ${rich_description}=${EMPTY}                            ${elements_per_page}=${EMPTY}                           ${passing_score}=${EMPTY}                           ${right_to_left}=${EMPTY}    ${version}=${EMPTY}    ${show_exam_summary}=${EMPTY}    ${external_sharing}=${EMPTY}    ${account}=${EMPTY}    ${supplier}=${EMPTY}
+    # Enter Form New Protocol Electronic Form Protocol
 
-#     # Mandatory fields and arguments first
-#     Enter Protocol Name         ${protocol_name}
-#     Select Business Unit        ${business_unit}
-#     Select Protocol Execution Style                         ${protocol_execution_style}
+    #                           [Documentation]             Use this keyword to enter the entire form, first arguments are mandatory fields followed by optional ones
+    #                           ...                         checkbox accepts argument value on or off
+    #                           [Arguments]                 ${protocol_name}            ${business_unit}            ${protocol_execution_style}    ${additional_protocol_name}=${EMPTY}    ${classification}=${EMPTY}    ${rich_description}=${EMPTY}    ${elements_per_page}=${EMPTY}    ${passing_score}=${EMPTY}    ${right_to_left}=${EMPTY}    ${version}=${EMPTY}    ${show_exam_summary}=${EMPTY}    ${external_sharing}=${EMPTY}    ${account}=${EMPTY}    ${supplier}=${EMPTY}
 
-#     # Now the optional fields, default value is ${EMPTY}, let's skip these when not provided
-#     IF                          '${additional_protocol_name}'!='${EMPTY}'
-#         Enter Additional Protocol Name                      ${additional_protocol_name}
-#     END
+    #                           # Mandatory fields and arguments first
+    #                           Enter Protocol Name         ${protocol_name}
+    #                           Select Business Unit        ${business_unit}
+    #                           Select Protocol Execution Style                         ${protocol_execution_style}
 
-#     IF                          '${classification}'!='${EMPTY}'
-#         Select Classification                               ${classification}
-#     END
+    #                           # Now the optional fields, default value is ${EMPTY}, let's skip these when not provided
+    #                           IF                          '${additional_protocol_name}'!='${EMPTY}'
+    #                           Enter Additional Protocol Name                          ${additional_protocol_name}
+    #                           END
 
-#     IF                          '${rich_description}'!='${EMPTY}'
-#         Enter Rich Description                              ${rich_description}
-#     END
+    #                           IF                          '${classification}'!='${EMPTY}'
+    #                           Select Classification       ${classification}
+    #                           END
 
-#     IF                          '${elements_per_page}'!='${EMPTY}'
-#         Enter Elements Per Page                             ${elements_per_page}
-#     END
+    #                           IF                          '${rich_description}'!='${EMPTY}'
+    #                           Enter Rich Description      ${rich_description}
+    #                           END
 
-#     IF                          '${passing_score}'!='${EMPTY}'
-#         Enter Passing Score     ${${passing_score}}
-#     END
+    #                           IF                          '${elements_per_page}'!='${EMPTY}'
+    #                           Enter Elements Per Page     ${elements_per_page}
+    #                           END
 
-#     IF                          '${right_to_left}'!='${EMPTY}'
-#         Select Right to Left    ${right_to_left}
-#     END
+    #                           IF                          '${passing_score}'!='${EMPTY}'
+    #                           Enter Passing Score         ${${passing_score}}
+    #                           END
 
-#     IF                          '${version}'!='${EMPTY}'
-#         Enter Version           ${version}
-#     END
+    #                           IF                          '${right_to_left}'!='${EMPTY}'
+    #                           Select Right to Left        ${right_to_left}
+    #                           END
 
-#     IF                          '${show_exam_summary}'!='${EMPTY}'
-#         Select Show Exam Summary                            ${show_exam_summary}
-#     END
+    #                           IF                          '${version}'!='${EMPTY}'
+    #                           Enter Version               ${version}
+    #                           END
 
-#     IF                          '${external_sharing}'!='${EMPTY}'
-#         Select External Sharing                             ${external_sharing}
-#     END
+    #                           IF                          '${show_exam_summary}'!='${EMPTY}'
+    #                           Select Show Exam Summary    ${show_exam_summary}
+    #                           END
 
-#     IF                          '${account}'!='${EMPTY}'
-#         Search Account          ${account}
-#     END
+    #                           IF                          '${external_sharing}'!='${EMPTY}'
+    #                           Select External Sharing     ${external_sharing}
+    #                           END
 
-#     IF                          '${supplier}'!='${EMPTY}'
-#         Search Supplier         ${supplier}
-#     END
+    #                           IF                          '${account}'!='${EMPTY}'
+    #                           Search Account              ${account}
+    #                           END
+
+    #                           IF                          '${supplier}'!='${EMPTY}'
+    #                           Search Supplier             ${supplier}
+    #                           END
