@@ -68,5 +68,6 @@ verify Revision log is created
     Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
+    ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
     VerifyText                  Controlled BC               anchor=Document Revision Logs Name
