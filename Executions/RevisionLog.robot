@@ -98,16 +98,15 @@ Crate MD type Simple
     TypeText                    Rationale of Revision       test
     ComboBox                    Search People...            Admin
     ClickText                   Next
-    VerifyText                  E-Signature for Send for Review
     Sign with admin
     ClickText                   History                     delay=2s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs
+    VerifyText                  Simple BC               anchor=Document Revision Logs Name
     ClickFieldValue             Master Document             
     Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
+    VerifyText                  Simple BC               anchor=Document Revision Logs Name
