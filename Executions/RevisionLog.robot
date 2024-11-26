@@ -57,6 +57,10 @@ Crate MD1
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
+    ClickText                   History                        delay=2s
+    ScrollTo                    Document Revision Logs
+    VerifyText                  Revision Logs
+    VerifyText                  Controlled BC                        anchor=Document Revision Logs
 
 verify Revision log is created  
     [Documentation]             verify Revision log is created
@@ -65,7 +69,4 @@ verify Revision log is created
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     VerifyText                  Revision Logs
-    
-
-
-
+    VerifyText                  Controlled BC                        anchor=Document Revision Logs                     
