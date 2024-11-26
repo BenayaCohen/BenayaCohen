@@ -41,26 +41,26 @@ Crate MD1
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
-    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Actions                     partial_match=False         delay=6s
     HoverText                   Pending Review              delay=2s
     ClickText                   Sign
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    ClickText                   Actions                     partial_match=False         delay=12s
+    ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Start Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    ClickText                   Actions
-    ClickText                   QA Approval - Skip Training                             partial_match=False    delay=12s
+    ClickText                   Actions                     partial_match=False         delay=6s
+    ClickText                   QA Approval - Skip Training                             partial_match=False    delay=6s
     TypeText                    Comments                    test
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    ClickText                   History                        delay=2s
+    ClickText                   History                     delay=2s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC                        anchor=Document Revision Logs
+    VerifyText                  Controlled BC               anchor=Document Revision Logs
 
 verify Revision log is created  
     [Documentation]             verify Revision log is created
@@ -69,4 +69,4 @@ verify Revision log is created
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC                        anchor=Document Revision Logs                     
+    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
