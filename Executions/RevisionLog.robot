@@ -87,7 +87,7 @@ Crate MD type Simple
     Create simple name
     PickList                    *Document Type              Addendum
     PickList                    *Business Unit              General
-    ComboBox                    Search Departments...       test
+    ComboBox                    Search Departments...       QA
     save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done                        delay=5s
