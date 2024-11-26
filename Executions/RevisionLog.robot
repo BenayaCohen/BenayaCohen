@@ -15,7 +15,7 @@ Suite Teardown                  End suite
 Login
     Login
 
-Crate MD1 
+Crate MD type Controlled 
     [Documentation]             Crate MD and promote to effective
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
@@ -61,13 +61,38 @@ Crate MD1
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
     VerifyText                  Controlled BC               anchor=Document Revision Logs
-
-verify Revision log is created  
-    [Documentation]             verify Revision log is created
-    ClickFieldValue             Master Document
+    ClickFieldValue             Master Document             
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
+    ClickText                   Confirm
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
+    ScrollTo                    Document Revision Logs
+    VerifyText                  Revision Logs
+    VerifyText                  Controlled BC               anchor=Document Revision Logs Name                 delay=5
+    ClickFieldValue             Master Document             
     Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
     VerifyText                  Controlled BC               anchor=Document Revision Logs Name
+
+Crate MD type Simple 
+    [Documentation]             Crate MD and promote to effective
+    LaunchApp                   Master Documents
+    Click New Master Document type Simple
+    Create simple name
+    PickList                    *Document Type              Addendum
+    PickList                    *Business Unit              General
+    ComboBox                    Search Departments...       QA
+    save the record
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
+    ClickText                   Done                        delay=5s
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
+    ClickText                   Actions                     delay=2s
+    ClickText                   Approve
+    TypeText                    Description of Change       test                        delay=3s
+    TypeText                    Rationale of Revision       test
+    ComboBox                    Search People...            Admin
+    ClickText                   Next
+    VerifyText                  E-Signature for Send for Review
+    Sign with admin
