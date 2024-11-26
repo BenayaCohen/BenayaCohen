@@ -67,8 +67,12 @@ Crate MD type Controlled
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs Name                 delay=5
-    ClickFieldValue             Master Document             
+    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
+
+
+verify Revision log is created  
+    [Documentation]             verify Revision log is created
+    ClickFieldValue             Master Document
     Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
@@ -83,7 +87,7 @@ Crate MD type Simple
     Create simple name
     PickList                    *Document Type              Addendum
     PickList                    *Business Unit              General
-    ComboBox                    Search Departments...       QA
+    ComboBox                    Search Departments...       test
     save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done                        delay=5s
@@ -96,3 +100,14 @@ Crate MD type Simple
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
+    ClickText                   History                     delay=2s
+    ScrollTo                    Document Revision Logs
+    VerifyText                  Revision Logs
+    VerifyText                  Controlled BC               anchor=Document Revision Logs
+    ClickFieldValue             Master Document             
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
+    ClickText                   Confirm
+    Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
+    ScrollTo                    Document Revision Logs
+    VerifyText                  Revision Logs
+    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
