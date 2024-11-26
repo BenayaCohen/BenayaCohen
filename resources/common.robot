@@ -6,11 +6,11 @@ Library                         String
 *** Variables ***
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
-${username_admin}               admin@dcs5.1v.com.51qa
+${username_admin}               admin@xp53beta9b.com
 ${username_qa}                  quser@dcs5.1v.com.51qa
 ${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
-${login_url}                    https://dcs51v--51qa.sandbox.lightning.force.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
+${login_url}                    https://dream-enterprise-7995-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 ${BASE_IMAGE_PATH}
 
