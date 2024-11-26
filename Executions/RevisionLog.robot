@@ -30,6 +30,7 @@ Prerequisites 1
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done
     Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
+    ClickText                   Actions                        delay=2s     
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
     ClickItem                   checkbox                    anchor=Admin            partial_match=False
