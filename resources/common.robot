@@ -10,7 +10,7 @@ ${username_admin}               admin@xp53beta12.com
 ${username_qa}                  quser@dcs5.1v.com.51qa
 ${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
-${login_url}                    https://dream-enterprise-7995-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
+${login_url}                    https://dream-energy-8258-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 ${BASE_IMAGE_PATH}
 
