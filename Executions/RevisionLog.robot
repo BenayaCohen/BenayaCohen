@@ -70,15 +70,6 @@ Crate MD type Controlled
     VerifyText                  Controlled BC               anchor=Document Revision Logs Name
 
 
-verify Revision log is created  
-    [Documentation]             verify Revision log is created
-    ClickFieldValue             Master Document
-    Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
-    ClickText                   Confirm
-    Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
-    ScrollTo                    Document Revision Logs
-    VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
 
 Crate MD type Simple 
     [Documentation]             Crate MD and promote to effective
