@@ -6,7 +6,7 @@ Library                         String
 *** Variables ***
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
-${username_admin}               admin@xp53beta9b.com
+${username_admin}               admin@xp53beta12.com
 ${username_qa}                  quser@dcs5.1v.com.51qa
 ${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
