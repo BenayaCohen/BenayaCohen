@@ -59,6 +59,7 @@ Crate MD type Controlled
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     WHILE                            NewTest
         ClickFieldValue             Master Document             
+       
         Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
         ClickText                   Confirm
         Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
