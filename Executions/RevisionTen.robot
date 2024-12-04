@@ -31,9 +31,9 @@ Crate MD type Controlled
     ClickText                   Actions                     delay=2s
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
-    ClickItem                   checkbox                    anchor=Admin Xpress53Beta14                        partial_match=False
+    ClickItem                   checkbox                    anchor=Admin validationxpress52                        partial_match=False
     ClickText                   Next                        partial_match=False         delay=3s
-    ClickItem                   checkbox                    anchor=Admin Xpress53Beta14                        partial_match=False     delay=3s
+    ClickItem                   checkbox                    anchor=Admin validationxpress52                        partial_match=False     delay=3s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
@@ -57,7 +57,7 @@ Crate MD type Controlled
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    WHILE                       NewTest
+    WHILE                       test
         ClickFieldValue         Master Document
         Wait Until Keyword Succeeds                         60                          5                      ClickText               New    delay=5s
         ClickText               Confirm
