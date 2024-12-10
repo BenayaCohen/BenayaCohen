@@ -8,7 +8,7 @@ Library                         String
 ${BROWSER}                      chrome
 ${username_admin}               admin@xp53beta21.com
 ${username_qa}                  quser@dcs5.1v.com.51qa
-${password_admin}               Dotbcs02
+${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
 ${login_url}                    https://customer-energy-60492-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
