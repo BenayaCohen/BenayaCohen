@@ -143,13 +143,13 @@ Crate MD type PromoMats
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
-    ClickText                   Start Approval
+    ClickText                   Sign Promotional Material Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
-    ClickText                   QA Approval - Skip Training                             partial_match=False    delay=6s
+    ClickText                   Final Approval - Skip Training                             partial_match=False    delay=6s
     TypeText                    Comments                    test
     ClickText                   Next
-    VerifyText                  E-Signature for QA Approval
+    VerifyText                  E-Signature for Final Approval - Skip Training
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   History                     delay=2s
     ScrollTo                    Document Revision Logs
