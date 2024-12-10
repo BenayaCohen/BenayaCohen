@@ -26,7 +26,7 @@ Crate MD type Controlled
     ComboBox                    Search Departments...       QA
     save the record
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
-    ClickText                   Done
+    ClickText                   Done                        delay=2s
     Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
     ClickText                   Actions                     delay=2s
     ClickText                   Send for Review
