@@ -129,6 +129,7 @@ Crate MD type PromoMats
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
+    ClickText                   Edit                        anchor=Set Effective Plan                          delay=2s
     ScrollTo                    Authority Review Details    delay=2s
     PickList                    Commercial Authority Status                             Approved
     TypeText                    Commercial Authority Comments                           test1
@@ -136,6 +137,7 @@ Crate MD type PromoMats
     TypeText                    Legal Authority Comments    test2
     PickList                    Medical Authority Status    Approved
     TypeText                    Medical Authority Comments                              test3
+    save the record
     ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Sign Promotional Material Review
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
