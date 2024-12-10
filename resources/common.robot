@@ -89,6 +89,11 @@ NoData
     ${CMD_Name_2}=              Catenate                    Controlled BC               ${CMD_Name_1}
     TypeText                    *Document Name              ${CMD_Name_2}
 
+Create Promotional Materials name  
+    ${CMD_Name_1}=              Generate Random String      4                           [NUMBERS]
+    ${CMD_Name_2}=              Catenate                    PromoMats BC               ${CMD_Name_1}
+    TypeText                    *Document Name              ${CMD_Name_2}
+
 Create training effective name
     ${TE_Name_1}=               Generate Random String      4                           [NUMBERS]
     ${TE_Name_2}=               Catenate                    Controlled BC               ${TE_Name_1}
@@ -152,6 +157,12 @@ Click New Master Document type Simple
     ClickText                   New                         anchor=Import               delay=5s
     Verify Dialog Title New Master Document
     ClickText                   Simple
+    ClickText                   Next
+
+Click New Master Document type Promotional Materials 
+    ClickText                   New                         anchor=Import               delay=5s
+    Verify Dialog Title New Master Document
+    ClickText                   Promotional Materials
     ClickText                   Next
 
 Verify Dialog Title New Master Document
