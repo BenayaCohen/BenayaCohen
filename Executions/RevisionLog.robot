@@ -31,9 +31,9 @@ Crate MD type Controlled
     ClickText                   Actions                     delay=2s
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21         partial_match=False
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False
     ClickText                   Next                        partial_match=False         delay=3s
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21         partial_match=False    delay=3s
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False    delay=3s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
@@ -118,10 +118,10 @@ Crate MD type PromoMats
     Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
     ClickText                   Actions                     delay=2s
     ClickText                   Send for Review
-    VerifyText                  Select Signatories for Revision Review
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21         partial_match=False
+    VerifyText                  Select Signatories for Promotional Material Review
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False
     ClickText                   Next                        partial_match=False         delay=3s
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21         partial_match=False    delay=3s
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False    delay=3s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
@@ -129,12 +129,12 @@ Crate MD type PromoMats
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
-    VerifyText                  Authority Review Details                                delay=2s
+    ScrollTo                    Authority Review Details    delay=2s
     PickList                    Commercial Authority Status                             Approved
     TypeText                    Commercial Authority Comments                           test1
-    PickList                    Legal Authority Status                                  Approved
-    TypeText                    Legal Authority Comments                                test2
-    PickList                    Medical Authority Status                                Approved
+    PickList                    Legal Authority Status      Approved
+    TypeText                    Legal Authority Comments    test2
+    PickList                    Medical Authority Status    Approved
     TypeText                    Medical Authority Comments                              test3
     ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Sign Promotional Material Review
@@ -146,7 +146,7 @@ Crate MD type PromoMats
     ClickText                   Sign Promotional Material Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
-    ClickText                   Final Approval - Skip Training                             partial_match=False    delay=6s
+    ClickText                   Final Approval - Skip Training                          partial_match=False    delay=6s
     TypeText                    Comments                    test
     ClickText                   Next
     VerifyText                  E-Signature for Final Approval - Skip Training
