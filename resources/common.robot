@@ -156,7 +156,7 @@ Click New Master Document type Controlled
 Click New Master Document type Simple 
     ClickText                   New                         anchor=Import               delay=5s
     Verify Dialog Title New Master Document
-    ClickText                   Simple                      partial_match=False                
+    ClickText                   Simple                      anchor=Document which require approval within the quality system
     ClickText                   Next
 
 Click New Master Document type Promotional Materials 
