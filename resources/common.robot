@@ -156,7 +156,7 @@ Click New Master Document type Controlled
 Click New Master Document type Simple 
     ClickText                   New                         anchor=Import               delay=5s
     Verify Dialog Title New Master Document
-    ClickText                   Simple                      anchor=Cancel
+    ClickText                   Simple                     
     ClickText                   Next
 
 Click New Master Document type Promotional Materials 
