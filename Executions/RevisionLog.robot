@@ -139,14 +139,13 @@ Crate MD type PromoMats
     TypeText                    Medical Authority Comments                              test3
     save the record
     ClickText                   Actions                     partial_match=False         delay=6s
-    HoverText                   Sign Promotional Material Review
-    ClickText                   Sign Promotional Material Review
+    ClickText                   Sign                        
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Send For Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
-    ClickText                   Sign Promotional Material Approval
+    ClickText                   Sign
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
     ClickText                   Final Approval - Skip Training                          partial_match=False    delay=6s
@@ -157,12 +156,12 @@ Crate MD type PromoMats
     ClickText                   History                     delay=2s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs
+    VerifyText                  PromoMats BC               anchor=Document Revision Logs
     ClickFieldValue             Master Document
     Wait Until Keyword Succeeds                             60                          5                      ClickText               New    delay=5s
     ClickText                   Confirm
     Wait Until Keyword Succeeds                             60                          5                      ClickText               History    delay=5s
     ScrollTo                    Document Revision Logs
     VerifyText                  Revision Logs
-    VerifyText                  Controlled BC               anchor=Document Revision Logs Name
+    VerifyText                  PromoMats BC               anchor=Document Revision Logs Name
 
