@@ -7,7 +7,7 @@ Library                         String
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
 ${username_admin}               admin@xp53beta21.com
-${username_qa}                  quser@dcs5.1v.com.51qa
+${username_qa}                  quser@xp53beta21.com
 ${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
 ${login_url}                    https://customer-energy-60492-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
@@ -25,14 +25,14 @@ Setup Browser
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
     Evaluate                    random.seed()               random                      # initialize random generator
-    Login
+    Login admin
 
 
 End suite
     Close All Browsers
 
 
-Login
+Login admin
     [Documentation]             Login to Salesforce instance
     GoTo                        ${login_url}
     TypeText                    Username                    ${username_admin}           delay=1
@@ -44,6 +44,17 @@ Login
     ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}                     ${secret}
     Run Keyword If              ${MFA_needed}               Fill MFA
 
+Login QA
+    [Documentation]             Login to Salesforce instance
+    GoTo                        ${login_url}
+    TypeText                    Username                    ${username_qa}           delay=1
+    TypeText                    Password                    ${password_qa}
+    ClickText                   Log In
+    # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
+    # If Not, MFA is Not expected.
+    # ${secret} is ${None} unless specifically given.
+    ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}                     ${secret}
+    Run Keyword If              ${MFA_needed}               Fill MFA
 
 Login As
     [Documentation]             Login As different persona. User needs to be logged into Salesforce with Admin rights
