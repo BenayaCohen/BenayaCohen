@@ -139,6 +139,7 @@ Crate MD type PromoMats
     TypeText                    Medical Authority Comments                              test3
     save the record
     ClickText                   Actions                     partial_match=False         delay=6s
+    HoverText                   Sign Promotional Material Review
     ClickText                   Sign Promotional Material Review
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ClickText                   Actions                     partial_match=False         delay=6s
