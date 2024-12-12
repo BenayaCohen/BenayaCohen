@@ -26,7 +26,7 @@ Setup Browser
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
     Evaluate                    random.seed()               random                      # initialize random generator
     Login
-    Login QA
+    
 
 
 End suite
