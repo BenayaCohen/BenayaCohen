@@ -45,18 +45,6 @@ Login
     ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}                     ${secret}
     Run Keyword If              ${MFA_needed}               Fill MFA
 
-Login QA
-    [Documentation]             Login to Salesforce instance
-    GoTo                        ${login_url}
-    TypeText                    Username                    ${username_qa}           delay=1
-    TypeText                    Password                    ${password_qa}
-    ClickText                   Log In
-    # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
-    # If Not, MFA is Not expected.
-    # ${secret} is ${None} unless specifically given.
-    ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}                     ${secret}
-    Run Keyword If              ${MFA_needed}               Fill MFA
-
 Login As
     [Documentation]             Login As different persona. User needs to be logged into Salesforce with Admin rights
     ...                         before calling this keyword to change persona.
