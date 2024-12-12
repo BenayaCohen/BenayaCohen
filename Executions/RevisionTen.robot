@@ -3,7 +3,7 @@ Resource                        ../resources/common.robot
 Library                         DataDriver                  file=edit_fields.csv
 Library                         QVision
 Library                         DateTime
-Suite Setup                     OpenBrowser                 about:blank                 chrome
+Suite Setup                     Setup Browser                
 Suite Teardown                  End suite
 
 
@@ -59,6 +59,7 @@ Crate MD type Controlled
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ${RN}=                      GetFieldValue               Revision Number
+    Should Not Be Equal         ${RN}                       5.0
     WHILE                       ${RN}=
         ClickFieldValue         Master Document
         Wait Until Keyword Succeeds                         60                          5                      ClickText               New    delay=5s
