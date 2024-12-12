@@ -57,8 +57,8 @@ Crate MD type Controlled
     ClickText                   Next
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
-    ${RN}=                      VerifyText                        Revision Number  
-    WHILE                       test
+    ${RN}=                      GetFieldValue                        Revision Number  
+    WHILE                       ${RN}=
         ClickFieldValue         Master Document
         Wait Until Keyword Succeeds                         60                          5                      ClickText               New    delay=5s
         ClickText               Confirm
