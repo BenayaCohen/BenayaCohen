@@ -3,7 +3,7 @@ Resource                        ../resources/common.robot
 Library                         DataDriver                  file=edit_fields.csv
 Library                         QVision
 Library                         DateTime
-Suite Setup                     Setup Browser                
+Suite Setup                     Setup Browser
 Suite Teardown                  End suite
 
 
@@ -32,9 +32,9 @@ Crate MD type Controlled
     ClickText                   Actions                     delay=2s
     ClickText                   Send for Review
     VerifyText                  Select Signatories for Revision Review
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21                    partial_match=False
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False
     ClickText                   Next                        partial_match=False         delay=3s
-    ClickItem                   checkbox                    anchor=Admin Xpress5B21                    partial_match=False     delay=3s
+    ClickItem                   checkbox                    anchor=Admin Xpress5B21     partial_match=False    delay=3s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
@@ -59,8 +59,7 @@ Crate MD type Controlled
     VerifyText                  E-Signature for QA Approval
     Wait Until Keyword Succeeds                             60                          5                      Sign with admin
     ${RN}=                      GetFieldValue               Revision Number
-    WHILE                       ${RN}
-        Should Not Be Equal         ${RN}                       2.0
+    WHILE                       Should Not Be Equal                        ${RN}                        5.0                     
         ClickFieldValue         Master Document
         Wait Until Keyword Succeeds                         60                          5                      ClickText               New    delay=5s
         ClickText               Confirm
@@ -68,9 +67,9 @@ Crate MD type Controlled
         ClickText               Actions                     delay=2s
         ClickText               Send for Review
         VerifyText              Select Signatories for Revision Review
-        ClickItem               checkbox                    anchor=Admin Xpress5B21                    partial_match=False
+        ClickItem               checkbox                    anchor=Admin Xpress5B21     partial_match=False
         ClickText               Next                        partial_match=False         delay=3s
-        ClickItem               checkbox                    anchor=Admin Xpress5B21                    partial_match=False     delay=3s
+        ClickItem               checkbox                    anchor=Admin Xpress5B21     partial_match=False    delay=3s
         ClickText               Next                        partial_match=False
         TypeText                Description of Change       test                        delay=3s
         TypeText                Rationale of Revision       test
