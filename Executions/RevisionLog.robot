@@ -13,7 +13,7 @@ Suite Teardown                  End suite
 
 
 Login
-    Login admin
+    Login
 
 Crate MD type Controlled 
     [Documentation]             Crate MD and promote to effective
@@ -165,7 +165,3 @@ Crate MD type PromoMats
     VerifyText                  Revision Logs
     VerifyText                  PromoMats BC               anchor=Document Revision Logs Name
 
-Login with QA
-    OpenWindow
-    Login QA
-    LaunchApp                   Master Documents
