@@ -25,7 +25,7 @@ Setup Browser
     SetConfig                   LineBreak                   ${EMPTY}                    #\ue000
     SetConfig                   DefaultTimeout              20s                         #sometimes salesforce is slow
     Evaluate                    random.seed()               random                      # initialize random generator
-    Login admin
+    Login
     Login QA
 
 
@@ -33,7 +33,7 @@ End suite
     Close All Browsers
 
 
-Login admin
+Login
     [Documentation]             Login to Salesforce instance
     GoTo                        ${login_url}
     TypeText                    Username                    ${username_admin}           delay=1
