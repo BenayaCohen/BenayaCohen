@@ -26,7 +26,8 @@ Crate MD type Controlled
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
     ComboBox                    Search Departments...       QA
-    save the record
+    save the record             
+    Sleep                       5
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
     ClickText                   Done                        delay=2s
     Wait Until Keyword Succeeds                             60                          5                      ClickText               Actions    delay=5s
