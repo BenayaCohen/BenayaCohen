@@ -18,6 +18,7 @@ Login
 
 Crate MD type Controlled 
     [Documentation]             Crate MD and promote to effective
+    Login
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
     Create Controlled name
