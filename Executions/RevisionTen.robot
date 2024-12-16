@@ -1,6 +1,5 @@
 *** Settings ***
 Resource                        ../resources/common.robot
-Library                         DataDriver                  file=edit_fields.csv
 Library                         QVision
 Library                         DateTime
 Suite Setup                     Setup Browser
@@ -64,13 +63,13 @@ Crate MD type Controlled
     ${RN}=                      GetFieldValue               Revision Number
     WHILE                       ${RN}
         ClickFieldValue         Master Document
-        IF                      ${RN} == 2.0
+        IF                      ${RN} == 10.0
             LogScreenshot
         ELSE
             Log                 Revision Number is les then 10.0
         END
         ${RN}=                  GetFieldValue               Revision Number
-        Should Not Be Equal     ${RN}                       2.0
+        Should Not Be Equal     ${RN}                       10.0
         Wait Until Keyword Succeeds                         60                          5                      ClickText               New    delay=5s
         ClickText               Confirm
         Wait Until Keyword Succeeds                         60                          5                      ClickText               Actions    delay=5s
