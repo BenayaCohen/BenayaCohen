@@ -16,6 +16,7 @@ Login
     Login
 
 Crate MD type Controlled 
+    [Tags]        testRn
     [Documentation]             Crate MD and promote to effective
     Login
     LaunchApp                   Master Documents
