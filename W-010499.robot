@@ -15,7 +15,7 @@ Suite Teardown                  End suite
 Login
     Login
 
-Crate MD type Controlled 
+W-010499 
     Login
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
