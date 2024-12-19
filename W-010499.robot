@@ -18,6 +18,9 @@ Login
 W-010499 
     Login
     LaunchApp                   Master Documents
+
+
+ W-010499 2   
     Click New Master Document type Controlled
     Create Controlled name
     PickList                    *Document Type              Policy
