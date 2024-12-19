@@ -12,11 +12,11 @@ Suite Teardown                  End suite
 
 
 
-Login
-    Login
+
 
 Crate MD type Controlled 
     [Documentation]             Crate MD and promote to effective
+    Login
     LaunchApp                   Master Documents             
     Sleep                       5
     Click New Master Document type Controlled
