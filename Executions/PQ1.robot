@@ -6,7 +6,6 @@
 
 *** Settings ***
 Resource                        ../resources/common.robot
-Library                         DataDriver                  file=edit_fields.csv
 Library                         QVision
 Library                         DateTime
 Suite Setup                     Setup Browser
