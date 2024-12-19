@@ -17,7 +17,8 @@ Login
 
 Crate MD type Controlled 
     [Documentation]             Crate MD and promote to effective
-    LaunchApp                   Master Documents
+    LaunchApp                   Master Documents             
+    Sleep                       5
     Click New Master Document type Controlled
     Create Controlled name
     PickList                    *Document Type              Policy
