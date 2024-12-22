@@ -6,11 +6,11 @@ Library                         String
 *** Variables ***
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
-${username_admin}               admin@validationxpress52.com.53version
+${username_admin}               admin@oq53val.com
 ${username_qa}                  quser@xp53beta21.com
-${password_admin}               Dotbcs02
+${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
-${login_url}                    https://validationxpress52--53version.sandbox.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
+${login_url}                    https://oq53val.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 ${BASE_IMAGE_PATH}
 
