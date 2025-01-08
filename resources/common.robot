@@ -42,9 +42,9 @@ Login
     # We'll check if variable ${secret} is given. If yes, fill the MFA dialog.
     # If Not, MFA is Not expected.
     # ${secret} is ${None} unless specifically given.
-    ${MFA_needed}=              Run Keyword And Return Status                           Should Not Be Equal         ${None}                     ${secret}
-    Run Keyword If              ${MFA_needed}               Fill MFA
-
+    ${mfa_code}=    GetOTP          ${username_admin}    ${MY_SECRET}
+    TypeText        Code            ${mfa_code}
+    
 Login As
     [Documentation]             Login As different persona. User needs to be logged into Salesforce with Admin rights
     ...                         before calling this keyword to change persona.
