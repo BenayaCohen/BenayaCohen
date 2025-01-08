@@ -15,7 +15,8 @@ Suite Teardown                  End suite
 Login
     Login
 
-Crate MD type Controlled 
+Crate MD type Controlled
+    Login
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
     Create Controlled name
