@@ -23,7 +23,7 @@ Crate MD type Controlled
     PickList                    *Document Type              Policy
     PickList                    *Business Unit              General
     PickList                    *Is this a Form or Translation?                         No
-    ComboBox                    Search Departments...       QA
+    ComboBox                    Search Departments...       qa
     save the record             
     Sleep                       5
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx
