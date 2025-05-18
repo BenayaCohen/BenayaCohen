@@ -6,11 +6,11 @@ Library                         String
 *** Variables ***
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                      chrome
-${username_admin}               admin@xp53beta23.com
+${username_admin}               admin@54testsorg1.dot.52val
 ${username_qa}                  quser@xp53beta21.com
 ${password_admin}               Dotbcs00
 ${password_qa}                  Dotbcs00
-${login_url}                    https://app-java-5758-dev-ed.scratch.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
+${login_url}                    https://54testsorg1--52val.sandbox.my.salesforce.com        # Salesforce instance. NoTE: Should be overwritten in CRT variables
 ${home_url}                     ${login_url}/lightning/page/home
 ${BASE_IMAGE_PATH}
 
@@ -121,7 +121,7 @@ Appendix
     ComboBox                    Search Departments...       test
     save the record
 
-Worksheet
+Create New Worksheet
     [Documentation]             create a master doument type Worksheet
     LaunchApp                   Master Documents
     Click New Master Document type Controlled
@@ -133,7 +133,10 @@ Worksheet
     save the record
     VerifyText                  WKS                         anchor=Master Document Number
 
-
+UPLOAD_FILE_MASTER_DOCUMENT
+    [Documentation]             Upload a file to a Master Document record
+    UploadFile                  Upload                      ${CURDIR}../Files_To_Upload/Test Doc.docx      delay=5s
+    ClickText                   Done                        partial_match=false         delay=5
 
 Protocol
     [Documentation]             create a master doument type Protocol
