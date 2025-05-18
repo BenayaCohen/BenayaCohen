@@ -16,7 +16,6 @@ Login
     Login
 
 Crate MD type Controlled
-    LaunchApp                   Master Documents
     Create New Worksheet
     UPLOAD_FILE_MASTER_DOCUMENT
     promote Controlled record to effective
