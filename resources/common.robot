@@ -135,8 +135,8 @@ Create New Worksheet
 
 UPLOAD_FILE_MASTER_DOCUMENT
     [Documentation]             Upload a file to a Master Document record
-    UploadFile                  Upload                      ${CURDIR}../Files_To_Upload/Test Doc.docx      delay=5s
-    ClickText                   Done                        partial_match=false         delay=5
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx      delay=5s             
+    ClickText                   Done                        delay=2s
 
 Protocol
     [Documentation]             create a master doument type Protocol
