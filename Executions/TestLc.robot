@@ -17,5 +17,6 @@ Login
 
 Crate MD type Controlled
     Create New Worksheet
-    UPLOAD_FILE_MASTER_DOCUMENT
+    UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx      delay=5s             
+    ClickText                   Done                        delay=2s
     promote Controlled record to effective
