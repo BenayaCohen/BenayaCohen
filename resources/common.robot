@@ -221,14 +221,14 @@ Navigate to Document Revision
 promote Controlled record to effective
     ClickText                   Actions                     delay=5s
     ClickText                   Send for Review
-    VerifyText                  Select Signatories for Revision Review                delay=3s
+    VerifyText                  Select Signatories for Revision Review                
     ClickItem                   checkbox                    anchor=Admin PipelineTests           partial_match=False
     ClickText                   Next                        partial_match=False         delay=3s
     ClickItem                   checkbox                    anchor=Admin PipelineTests           partial_match=False         delay=3s
     ClickText                   Next                        partial_match=False
     TypeText                    Description of Change       test                        delay=3s
     TypeText                    Rationale of Revision       test
-    ComboBox                    Search People...            Admin User
+    ComboBox                    Search People...            Admin PipelineTests
     ClickText                   Next
     VerifyText                  E-Signature for Send for Review
     Sign with admin
