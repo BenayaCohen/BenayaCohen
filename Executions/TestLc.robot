@@ -1,4 +1,5 @@
 *** Settings ***
+Library    QWeb
 Resource                        ../resources/common.robot
 Library                         QVision
 Library                         DateTime
@@ -20,3 +21,8 @@ Crate MD type Controlled
     UploadFile                  Upload Files                ../Files_To_Upload/Test Doc.docx      delay=5s             
     ClickText                   Done                        delay=2s
     promote Controlled record to effective
+    
+    ClickItem    Content Publication
+    ClickText    close
+    ClickElement                (//span[@class\='lcvb-icons'])                            timeout=10
+    ClickText    Close
